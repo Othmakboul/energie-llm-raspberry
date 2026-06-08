@@ -1,0 +1,17 @@
+[
+  {
+    "id": "court_01",
+    "categorie": "court",
+    "texte": "Quelle est la capitale de la France ?"
+  },
+  {
+    "id": "moyen_01",
+    "categorie": "moyen",
+    "texte": "Explique en quelques phrases ce qu'est l'edge computing."
+  },
+  {
+    "id": "long_01",
+    "categorie": "long",
+    "texte": "Rédige un paragraphe détaillé expliquant les avantages et les inconvénients du déploiement de modèles de langage sur des plateformes embarquées."
+  }
+]

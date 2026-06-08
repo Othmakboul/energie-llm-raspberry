@@ -1,0 +1,13 @@
+# Inférence : llama.cpp via bindings Python (ou utiliser le binaire llama.cpp directement)
+llama-cpp-python
+
+# Mesure énergétique / métriques système
+codecarbon
+psutil
+
+# Données & analyse
+pandas
+matplotlib
+
+# Interface de visualisation
+streamlit

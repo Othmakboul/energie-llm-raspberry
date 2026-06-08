@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Modèles (trop lourds pour git)
+models/*
+!models/.gitkeep
+*.gguf
+*.bin
+
+# Données expérimentales
+data/*
+!data/.gitkeep
+
+# Outils / logs
+*.log
+.DS_Store
+.vscode/
+codecarbon.lock
+emissions.csv
