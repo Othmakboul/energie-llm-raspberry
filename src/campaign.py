@@ -1,72 +1,55 @@
-"""Campagne d'expériences : croise prompts et paramètres, mesure, sauvegarde.
+from llama_cpp import Llama
+from codecarbon import EmissionsTracker
+import pandas as pd
+import time
 
-Boucle sur le jeu de prompts et sur une grille de paramètres d'inférence, mesure
-chaque exécution et écrit une ligne par run dans un CSV (data/raw/).
-"""
+# 1. Charger le modele UNE SEULE FOIS (avant la boucle)
+modele = Llama(model_path="models/Llama-3.2-1B-Instruct-Q4_K_M.gguf", verbose=False)
 
-from __future__ import annotations
+# 1bis. Inference de chauffe (resultat ignore) : reveille le CPU avant de mesurer
+modele("Bonjour", max_tokens=8)
 
-import csv
-import json
-from itertools import product
-from pathlib import Path
+# 2. La liste des questions a tester
+prompts = [
+    "Quelle est la capitale de la France ?",
+    "Cite trois fruits.",
+    "Explique en une phrase ce qu'est un ordinateur.",
+]
 
-from inference import lancer_inference
-from measure import mesurer
+# 3. Combien de fois on repete chaque mesure (pour moyenner et reduire le bruit)
+N_REPETITIONS = 3
 
-RACINE = Path(__file__).resolve().parents[1]
+# 4. Liste vide qui va recevoir tous les resultats
+resultats = []
 
+# 5. Pour CHAQUE question, on repete la mesure N fois
+for prompt in prompts:
+    for run in range(N_REPETITIONS):          # range(3) -> 0, 1, 2
+        tracker = EmissionsTracker(save_to_file=False, log_level="error")
+        tracker.start()
+        debut = time.perf_counter()
 
-def charger_prompts(chemin: Path) -> list[dict]:
-    return json.loads(chemin.read_text(encoding="utf-8"))
+        sortie = modele(prompt, max_tokens=64)
 
+        duree = time.perf_counter() - debut
+        tracker.stop()
+        energie = tracker.final_emissions_data.energy_consumed
 
-def lancer_campagne(
-    modele_path: str,
-    prompts_path: Path = RACINE / "prompts" / "prompts.json",
-    sortie_csv: Path = RACINE / "data" / "raw" / "mesures.csv",
-    grille_max_tokens: tuple[int, ...] = (32, 128),
-    grille_temperature: tuple[float, ...] = (0.7,),
-) -> None:
-    prompts = charger_prompts(prompts_path)
-    sortie_csv.parent.mkdir(parents=True, exist_ok=True)
+        nb_tokens = sortie["usage"]["completion_tokens"]
+        joules = energie * 3_600_000
 
-    champs = [
-        "prompt_id", "categorie", "max_tokens", "temperature",
-        "n_tokens_generes", "duree_s", "cpu_percent", "freq_mhz", "energie_kwh",
-    ]
-    nouveau = not sortie_csv.exists()
+        # On ajoute une "fiche" de resultat a la liste (avec le numero de run)
+        resultats.append({
+            "prompt": prompt,
+            "run": run + 1,                   # run + 1 pour compter a partir de 1
+            "tokens": nb_tokens,
+            "duree_s": round(duree, 2),
+            "energie_kWh": energie,
+            "joules": round(joules, 1),
+        })
 
-    with sortie_csv.open("a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=champs)
-        if nouveau:
-            writer.writeheader()
+        print(f"[run {run + 1}/{N_REPETITIONS}] {prompt}  ->  {nb_tokens} tokens, {duree:.2f} s, {joules:.1f} J")
 
-        for prompt, max_tokens, temp in product(
-            prompts, grille_max_tokens, grille_temperature
-        ):
-            with mesurer() as m:
-                res = lancer_inference(
-                    modele_path=modele_path,
-                    prompt=prompt["texte"],
-                    prompt_id=prompt["id"],
-                    max_tokens=max_tokens,
-                    temperature=temp,
-                )
-
-            writer.writerow({
-                "prompt_id": res.prompt_id,
-                "categorie": prompt.get("categorie", ""),
-                "max_tokens": max_tokens,
-                "temperature": temp,
-                "n_tokens_generes": res.n_tokens_generes,
-                "duree_s": round(res.duree_s, 4),
-                "cpu_percent": m.cpu_percent_moyen,
-                "freq_mhz": m.freq_cpu_mhz,
-                "energie_kwh": m.energie_kwh,
-            })
-            print(f"OK {res.prompt_id} max_tokens={max_tokens} -> {res.duree_s:.2f}s")
-
-
-if __name__ == "__main__":
-    lancer_campagne(modele_path="models/modele.gguf")
+# 6. Ecrire toute la liste dans un fichier CSV
+pd.DataFrame(resultats).to_csv("data/raw/resultats.csv", index=False)
+print("\nResultats enregistres dans data/raw/resultats.csv")
