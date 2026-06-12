@@ -19,5 +19,6 @@ data/*
 *.log
 .DS_Store
 .vscode/
+.claude/
 codecarbon.lock
 emissions.csv

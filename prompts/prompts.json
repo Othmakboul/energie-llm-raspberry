@@ -1,17 +1,227 @@
 [
   {
-    "id": "court_01",
-    "categorie": "court",
-    "texte": "Quelle est la capitale de la France ?"
+    "classe": "court",
+    "n_caracteres": 29,
+    "prompt": "Does cognitive empathy exist?"
   },
   {
-    "id": "moyen_01",
-    "categorie": "moyen",
-    "texte": "Explique en quelques phrases ce qu'est l'edge computing."
+    "classe": "court",
+    "n_caracteres": 23,
+    "prompt": "Generate a movie review"
   },
   {
-    "id": "long_01",
-    "categorie": "long",
-    "texte": "Rédige un paragraphe détaillé expliquant les avantages et les inconvénients du déploiement de modèles de langage sur des plateformes embarquées."
+    "classe": "court",
+    "n_caracteres": 34,
+    "prompt": "Identify popular dishes in Mexico."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 33,
+    "prompt": "What is unique about a hyperbole?"
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 32,
+    "prompt": "Write an emergency response plan"
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 30,
+    "prompt": "Generate a quiz about physics."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 28,
+    "prompt": "Develop a metaphor for hope."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 39,
+    "prompt": "Summarize the poem \"Beat! Beat! Drums!\""
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 28,
+    "prompt": "Describe the primary colors."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 40,
+    "prompt": "Name two first aid treatments for a cut."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 37,
+    "prompt": "Write one sentence about handwashing."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 24,
+    "prompt": "Who is Samantha Andrews?"
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 24,
+    "prompt": "What year did WW2 start?"
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 28,
+    "prompt": "Give 10 features of the sun."
+  },
+  {
+    "classe": "court",
+    "n_caracteres": 32,
+    "prompt": "Write a mock newspaper headline."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 67,
+    "prompt": "Create a data visualization of the latest COVID-19 cases in the US."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 70,
+    "prompt": "Calculate the price after discount.\nRegular price: $100, Discount: 15%"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 71,
+    "prompt": "Parse the given sentence grammatically.\nThe small jar sat on the shelf."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 65,
+    "prompt": "Rewrite the given program in Java.\na = 4\nb = 5\nc = a + b\nprint(c)"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 71,
+    "prompt": "Based on the input, provide the correct spelling of the word.\nambigious"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 66,
+    "prompt": "Construct a query that returns information about the Eiffel Tower."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 71,
+    "prompt": "Create a set from the given input and find its size.\n[1, 2, 3, 2, 4, 2]"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 69,
+    "prompt": "What are the different types of characters in the given play?\nMacbeth"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 67,
+    "prompt": "Find the x-intercept of the line given by the equation.\ny = 4x + 10"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 70,
+    "prompt": "Identify the most suitable adverb for the following sentence\nShe works"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 71,
+    "prompt": "Generate a sentence using the words \"caffeine\", \"hunter\", and \"monday\"."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 67,
+    "prompt": "Sort the given words from most to least serious\nSneeze, trip, shout"
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 64,
+    "prompt": "Come up with at least 5 ways to use deep learning in healthcare."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 66,
+    "prompt": "Describe the concept of artificial intelligence in your own words."
+  },
+  {
+    "classe": "moyen",
+    "n_caracteres": 69,
+    "prompt": "Follow the given example and create a poem about a passionate sunset."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 180,
+    "prompt": "Create three subheadings that could be used to divide the news article.\nTesla announced plans to develop a new battery technology that will increase the range of electric vehicles."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 166,
+    "prompt": "Given a string word and a dictionary of words, determine whether the word is a valid word.\nString word: \"hello\"\nDictionary of words: { \"hi\", \"bye\", \"hello\", \"world\" }"
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 149,
+    "prompt": "Given the following conditions, formulate a hypothesis.\nTemperature, humidity, and precipitation levels are higher during the summer than the winter."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 157,
+    "prompt": "Make an assumption based on the following data.\n90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day"
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 179,
+    "prompt": "Given the following details, write a short paragraph about a vacation destination.\nDestination: Mexico \nTime of Year: Summer \nActivities: Swimming, fishing, snorkeling, zip-lining"
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 144,
+    "prompt": "Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 143,
+    "prompt": "Edit the following to make it suitable for school-aged children.\nBob and Bill were arguing over who was the best player on the basketball team."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 189,
+    "prompt": "Given a description of a situation, provide an appropriate ethical judgement.\nA chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 143,
+    "prompt": "Rewrite this poem to make it more vivid and interesting.\nOnce I had a house\nwhere I made a thousand memories\nIt served me well\nbut now I'm gone"
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 184,
+    "prompt": "Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.\nTwo kids from very different backgrounds meet in summer camp and form an unlikely friendship."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 181,
+    "prompt": "Label the following news article as either \"Political\" or \"Entertainment\"\nAnsel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 433,
+    "prompt": "Identify the sentence in the given paragraph that contains all the given words.\nWords: happiness, life, strive \nParagraph:\nLiving your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 164,
+    "prompt": "Frame a one-sentence hypothesis given the following information.\nThe goal of the study is to analyze the impact of online learning platforms on student performance."
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 138,
+    "prompt": "Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.\nAre you out of your mind?"
+  },
+  {
+    "classe": "long",
+    "n_caracteres": 220,
+    "prompt": "Create a short news article summarizing the following information.\nA new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use."
   }
 ]

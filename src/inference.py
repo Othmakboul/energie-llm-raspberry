@@ -2,7 +2,7 @@ from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 import time
 
-# 1. Charger le modele (hors mesure)
+# 1. Charger le modele 
 mon_modele = Llama(model_path="models/Llama-3.2-1B-Instruct-Q4_K_M.gguf", verbose=False)
 
 # 2. Demarrer le compteur d'energie + le chrono
@@ -11,12 +11,12 @@ tracker.start()
 debut = time.perf_counter()
 
 # 3. Generer la reponse
-resultat = mon_modele("Quelle est la capitale de la France ?", max_tokens=64)
+resultat = mon_modele("Quelle est la capitale de la France ?", max_tokens=64,stop=["\n"])
 
 # 4. Arreter le chrono + le compteur
 duree = time.perf_counter() - debut
 emissions = tracker.stop()
-energie = tracker.final_emissions_data.energy_consumed   # en kWh
+energie = tracker.final_emissions_data.energy_consumed   
 
 # 5. Recuperer les infos de la reponse
 texte = resultat["choices"][0]["text"]
