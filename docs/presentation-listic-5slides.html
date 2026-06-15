@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon stage en 5 slides — Énergie LLM sur Raspberry Pi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1419; color: #e8eaed; overflow: hidden; }
+  .slide { display: none; width: 100vw; height: 100vh; padding: 55px 80px; flex-direction: column; }
+  .slide.active { display: flex; }
+  .kicker { color: #4fc3f7; font-size: 1.05em; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  h1 { font-size: 2.5em; color: #fff; margin-bottom: 14px; line-height: 1.15; }
+  h2 { font-size: 1.9em; color: #4fc3f7; margin-bottom: 26px; border-bottom: 3px solid #4fc3f7; padding-bottom: 10px; }
+  p, li { font-size: 1.22em; line-height: 1.6; }
+  ul { list-style: none; margin-top: 6px; }
+  li { margin-bottom: 14px; padding-left: 32px; position: relative; }
+  li::before { content: "▸"; position: absolute; left: 6px; color: #4fc3f7; }
+  li.ok::before { content: "✓"; color: #81c784; }
+  li.key::before { content: "★"; color: #ffd54f; }
+  .big { font-size: 1.45em; color: #ffd54f; font-weight: bold; }
+  .muted { color: #9aa0a6; }
+  .center { align-items: center; justify-content: center; text-align: center; }
+  .row { display: flex; gap: 36px; margin-top: 10px; }
+  .col { flex: 1; background: #1a2433; border-radius: 12px; padding: 22px 26px; }
+  .col h3 { color: #4fc3f7; font-size: 1.15em; margin-bottom: 10px; }
+  .col p, .col li { font-size: 1.02em; }
+  .pipeline { display: flex; align-items: center; gap: 10px; margin: 22px 0; flex-wrap: wrap; justify-content: center; }
+  .box { background: #1e2a38; border: 2px solid #4fc3f7; border-radius: 10px; padding: 12px 16px; text-align: center; font-size: .95em; }
+  .box .s { font-size: .78em; color: #9aa0a6; display: block; margin-top: 4px; }
+  .arrow { color: #4fc3f7; font-size: 1.5em; }
+  table { border-collapse: collapse; margin: 14px 0; font-size: 1.15em; }
+  th, td { padding: 12px 26px; border: 1px solid #3c4043; text-align: center; }
+  th { background: #1e2a38; color: #4fc3f7; }
+  .bars { display: flex; align-items: flex-end; gap: 50px; height: 300px; margin: 20px auto 0; padding-left: 20px; }
+  .bargrp { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+  .bar { width: 110px; border-radius: 6px 6px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 8px; font-weight: bold; color: #0f1419; }
+  .bar.b1 { background: #4fc3f7; } .bar.b2 { background: #ffb74d; } .bar.b3 { background: #e57373; }
+  .barlbl { margin-top: 10px; font-size: 1.05em; }
+  .footer { position: fixed; bottom: 16px; left: 0; width: 100%; text-align: center; color: #5f6368; font-size: .9em; }
+  .nav { position: fixed; bottom: 12px; right: 26px; display: flex; gap: 8px; }
+  .nav button { background: #1e2a38; color: #e8eaed; border: 1px solid #3c4043; border-radius: 8px; padding: 6px 14px; cursor: pointer; }
+  .pg { position: fixed; top: 26px; right: 36px; color: #5f6368; font-size: 1em; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — Titre + Contexte -->
+<div class="slide active center">
+  <div class="pg">1 / 5</div>
+  <p class="kicker">Mon stage en 5 slides — LISTIC · 25 juin 2026</p>
+  <h1>Combien consomme une requête à une IA ?<br>Mesure énergétique d'un LLM embarqué sur Raspberry Pi</h1>
+  <p style="margin:18px 0 8px;">Othmane Makboul &amp; Amine Abidi</p>
+  <p class="muted">Encadrants : Sébastien Monnet, Stephan Plassart — Master, LISTIC</p>
+  <p style="margin-top:34px; max-width: 60%;">
+    Les modèles de langage (LLM) se déploient désormais sur des plateformes
+    contraintes (<em>edge computing</em>). Sur un Raspberry Pi, la
+    <b>consommation énergétique</b> devient une question centrale.
+  </p>
+</div>
+
+<!-- SLIDE 2 — Problématique -->
+<div class="slide">
+  <div class="pg">2 / 5</div>
+  <h2>Problématique</h2>
+  <p style="font-size:1.45em; margin-bottom:26px;">
+    <em>« Quel est le coût énergétique d'une requête sur un LLM embarqué,
+    et quels paramètres d'inférence l'influencent le plus ? »</em>
+  </p>
+  <ul>
+    <li class="key">Verrou matériel : le Raspberry Pi <b>n'a pas de compteur d'énergie intégré</b> (pas de RAPL comme sur les CPU x86)</li>
+    <li>→ il faut donc <b>estimer ou mesurer indirectement</b> l'énergie</li>
+    <li>Peu d'études analysent finement le coût <b>à l'échelle de la requête</b> sur ce type de matériel</li>
+    <li>Paramètres à explorer : taille du prompt, nombre de tokens générés, quantification, modèle</li>
+  </ul>
+</div>
+
+<!-- SLIDE 3 — Méthode -->
+<div class="slide">
+  <div class="pg">3 / 5</div>
+  <h2>Méthode</h2>
+  <div class="pipeline">
+    <div class="box">Modèle<span class="s">Llama-3.2-1B<br>Q4 (GGUF) · llama.cpp</span></div>
+    <div class="arrow">→</div>
+    <div class="box">Prompts<span class="s">dataset Alpaca<br>45 prompts stratifiés</span></div>
+    <div class="arrow">→</div>
+    <div class="box">Mesure<span class="s">CodeCarbon<br>+ chrono + tokens</span></div>
+    <div class="arrow">→</div>
+    <div class="box">CSV<span class="s">campagne<br>automatisée</span></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>Protocole statistique</h3>
+      <ul>
+        <li class="ok">Inférence de chauffe (warm-up) écartée</li>
+        <li class="ok">Répétitions + médiane (robuste au bruit)</li>
+        <li class="ok">Échantillon figé (seed) → reproductible</li>
+      </ul>
+      <p class="muted" style="font-size:.92em; margin-top:8px;">réf. Georges 2007 ; Hoefler &amp; Belli 2015</p>
+    </div>
+    <div class="col">
+      <h3>3 méthodes d'énergie (sur Pi)</h3>
+      <ul>
+        <li>Logicielle : CodeCarbon (estimation)</li>
+        <li>Physique : prise connectée (au mur)</li>
+        <li>Matérielle : PMIC du Pi 5 (<code>vcgencmd</code>)</li>
+      </ul>
+      <p class="muted" style="font-size:.92em; margin-top:8px;">→ croisées pour valider l'estimation</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 — Résultats -->
+<div class="slide">
+  <div class="pg">4 / 5</div>
+  <h2>Premiers résultats (540 mesures, sur PC)</h2>
+  <div class="row" style="align-items:center;">
+    <div style="flex:0 0 auto;">
+      <div class="bars">
+        <div class="bargrp"><div class="bar b1" style="height:31px;">26 J</div><div class="barlbl">16 tok</div></div>
+        <div class="bargrp"><div class="bar b2" style="height:85px;">72 J</div><div class="barlbl">64 tok</div></div>
+        <div class="bargrp"><div class="bar b3" style="height:300px;">254 J</div><div class="barlbl">256 tok</div></div>
+      </div>
+      <p class="muted center" style="margin-top:8px;">Énergie médiane vs max_tokens</p>
+    </div>
+    <div class="col" style="background:none;">
+      <ul>
+        <li class="key">L'énergie ≈ <b>linéaire</b> avec les tokens <b>générés</b> : <span class="big">r = 0,99</span></li>
+        <li class="key">Modèle : <b>E ≈ 10 J + ~1 J / token</b> (coût fixe + coût par token)</li>
+        <li class="ok">La <b>taille du prompt</b> est négligeable (vérifié ×3) → c'est la <b>sortie</b> qui domine</li>
+        <li class="ok">Médiane &gt; moyenne : un outlier à 322 J biaise la moyenne, pas la médiane</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 — Conclusion & suite -->
+<div class="slide">
+  <div class="pg">5 / 5</div>
+  <h2>Conclusion &amp; prochaines étapes</h2>
+  <ul>
+    <li class="ok"><b>Chaîne de mesure complète</b> et protocole rigoureux, validés sur PC</li>
+    <li class="ok"><b>Résultat clé</b> : le nombre de tokens générés est le levier énergétique n°1</li>
+  </ul>
+  <p style="margin:18px 0 8px; color:#4fc3f7; font-size:1.15em;">À venir :</p>
+  <ul>
+    <li>Portage sur <b>Raspberry Pi 5</b> → mesures de référence + <b>3 méthodes croisées</b></li>
+    <li>Élargir la grille : <b>quantification</b> (Q2/Q4/Q8) et <b>tailles de modèle</b> (1B/3B)</li>
+    <li>Interface de <b>visualisation</b> + rapport avec recommandations</li>
+  </ul>
+  <p class="center big" style="margin-top:38px;">Merci — des questions ?</p>
+</div>
+
+<div class="nav">
+  <button onclick="prev()">←</button>
+  <button onclick="next()">→</button>
+</div>
+<div class="footer">← → pour naviguer · F11 plein écran</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let cur = 0;
+  function show(i){ slides[cur].classList.remove('active'); cur = Math.max(0, Math.min(slides.length-1, i)); slides[cur].classList.add('active'); }
+  function next(){ show(cur+1); } function prev(){ show(cur-1); }
+  document.addEventListener('keydown', e => {
+    if(['ArrowRight',' ','PageDown'].includes(e.key)) next();
+    if(['ArrowLeft','PageUp'].includes(e.key)) prev();
+  });
+</script>
+</body>
+</html>
