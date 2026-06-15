@@ -35,6 +35,22 @@ rencontrés et leurs solutions. Ce journal servira de base au rapport final.
 - TODO : faire varier les parametres (taille prompt, max_tokens, quantif, modeles) ;
   ajouter une inference de chauffe + repetitions ; preparer le passage sur le Pi.
 
+#### Jour 3 — 09/06/2026 (Amine — outils de mesure / PMIC)
+- Etat de l'art outils de mesure redige : `docs/etat_art_outils_mesure.md`. Insight cle :
+  **RAPL = x86 only** -> inutilisable sur ARM ; la vraie mesure vient du HW.
+- Architecture/protocole de mesure redige : `docs/architecture_mesure.md` (les 3 methodes,
+  schema CSV, variables, protocole).
+- **Decision materiel** : on part sur une **prise connectee** (au mur) au lieu d'un wattmetre
+  USB-C -> pas d'achat specifique. Lecture par script requise.
+- **1re mesure reelle sur le Pi 5** via `vcgencmd pmic_read_adc` (idle vs charge 4 coeurs) :
+  - VDD_CORE (CPU) : **0,39 W -> 3,27 W** (tension 0,750 -> 0,890 V = DVFS).
+  - Total onboard : **~1,55 W -> ~4,51 W** (delta CPU ~+3 W).
+  - Confirme : `EXT5V` a une tension mais **pas de courant** -> le PMIC ne voit pas le 5 V
+    -> besoin de la prise pour le total systeme.
+- **Methodo binome** : le PMIC = 3e methode de mesure (onboard reelle), ajoutee a la roadmap
+  a cote de CodeCarbon + prise -> triangulation a confronter dans le rapport.
+- TODO : construire le harness PMIC en Python, puis le brancher dans campaign.py.
+
 ### Jour 4 — 11/06/2026
 - Point d'avancement #1 avec les tuteurs : PASSE avec succes.
 - Presente : chaine de mesure complete, 1ers resultats (19 J vs 100 J),
@@ -43,6 +59,16 @@ rencontrés et leurs solutions. Ce journal servira de base au rapport final.
 - Retours tuteurs : (1) utiliser un DATASET de prompts dedie/standard plutot que
   des questions inventees ; (2) justifier scientifiquement le choix moyenne vs
   mediane en s'appuyant sur des articles de methodologie de benchmark.
+
+#### Jour 4 — 11/06/2026 (Amine — prise connectee)
+- **Materiel prise connectee identifie (fourni par le labo)** : prise **Aeotec Smart Switch 7
+  (ZW175-C16)** + cle USB controleur **Aeotec Z-Stick 7 (ZWA010-C)**. Protocole = **Z-Wave**
+  -> lecture par script via la pile **Z-Wave JS** (zwave-js-ui ou zwave-js-server + client Python).
+- ⚠️ **Limite identifiee : precision ~±3 W** sur la puissance instantanee — enorme face au Pi (2–8 W).
+- **Decision** : on ne se fie pas au W instantane -> **benchmarks longs** : repeter la meme requete
+  ×N sur plusieurs minutes, lire le **compteur d'energie cumule (kWh)** de la prise, soustraire le
+  repos, diviser par N. L'erreur ±3 W se moyenne ; le kWh cumule est la valeur fiable.
+- TODO : inclure la prise dans le harness (timestamps debut/fin + releve kWh).
 
 ### Jour 5 — 12/06/2026
 - Recherche bibliographique (datasets + stats) -> docs/recherche-datasets-stats.md.
@@ -68,4 +94,35 @@ rencontrés et leurs solutions. Ce journal servira de base au rapport final.
 - Graphique genere : data/energie_vs_tokens.png
 - CONCLUSION JOUR 5 : le nombre de tokens GENERES est LE facteur dominant de
   l'energie ; la taille du prompt est negligeable (<= ~430 car.) ; modele lineaire.
+
+#### Jour 5 — 12/06/2026 (Amine — mise en route du Pi pour l'inference)
+- VS Code installe sur le Pi (`apt install code`), repo clone, venv + codecarbon/psutil/pandas.
+- Piege n°1 : numpy plantait (`libopenblas.so.0` manquant) -> `apt install libopenblas0`.
+- **Piege n°2 (important)** : la compilation de `llama-cpp-python` echouait. Diagnostic via le nom
+  du compilateur (`arm-linux-gnueabihf-g++` = 32 bits) : **l'OS flashe etait Raspberry Pi OS 32 bits**.
+  Attention, `uname -m` repond `aarch64` (noyau 64 bits) meme sur l'OS 32 bits -> le bon test
+  est `dpkg --print-architecture` (armhf = 32, arm64 = 64). Confirme : armhf.
+- Consequences du 32 bits : llama.cpp casse/lent (optimise aarch64), max ~3 Go RAM/processus
+  (16 Go inutilisables), mesures indefendables -> **decision : reflash en Raspberry Pi OS 64-bit
+  AVANT toute mesure** (aucune campagne Pi encore faite, c'est le bon moment).
+- Lecon methodo pour le rapport : valider l'architecture de l'OS fait partie du setup reproductible.
+
+## Semaine 2
+
+### Jour 6 — 15/06/2026 (Amine — reflash 64-bit + remise en route)
+- **Reflash effectue** : microSD reformatee + **Raspberry Pi OS 64-bit** (version standard, avec bureau)
+  ecrit proprement via **Raspberry Pi Imager** (et non plus une copie d'archive). Pi 5 redemarre OK
+  sur ecran+clavier+souris.
+- Verifications post-reflash : OS 64-bit confirme, ~16 Go de RAM visibles, 4 coeurs. Systeme mis a jour
+  (`apt full-upgrade`).
+- Point methodo (a citer) : le projet utilise **`llama-cpp-python`** (binding Python, cf. requirements.txt),
+  pas un binaire llama.cpp compile a la main -> sur le 64-bit, `pip install llama-cpp-python` doit passer
+  (l'echec du 12/06 venait du 32 bits).
+- **Reintegration du repo** : recupere la derniere version d'Othmane (campaign.py multi-modeles,
+  dataset Alpaca, temperature=0) comme base, puis re-pose la partie mesure (Amine) par-dessus :
+  `src/pmic.py` + injection du PMIC dans `campaign.py` (colonnes `joules_pmic`, `joules_pmic_cpu`,
+  `w_moyen_pmic`) + docs mesure (architecture, etat de l'art, points d'avancement, questions tuteurs).
+- TODO J7 : sur le Pi reflashe -> `git clone` + venv + `pip install -r requirements.txt`
+  (verifier la compilation de llama-cpp-python en 64-bit), re-telecharger les .gguf, lancer une 1re
+  campagne triangulee (PMIC reel), monter la pile Z-Wave pour la prise.
 

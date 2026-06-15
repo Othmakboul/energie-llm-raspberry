@@ -1,5 +1,6 @@
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
+from pmic import MesurePMIC      # methode 2 : mesure onboard REELLE du Pi 5 (mock hors Pi) [Amine]
 import pandas as pd
 import json
 import os
@@ -53,7 +54,9 @@ for config in MODELES:
                 tracker.start()
                 debut = time.perf_counter()
 
-                sortie = modele(prompt, max_tokens=max_tokens, temperature=TEMPERATURE)
+                # Le PMIC echantillonne la puissance onboard en // pendant l'inference (methode 2)
+                with MesurePMIC() as pmic:
+                    sortie = modele(prompt, max_tokens=max_tokens, temperature=TEMPERATURE)
 
                 duree = time.perf_counter() - debut
                 tracker.stop()
@@ -74,12 +77,16 @@ for config in MODELES:
                     "tokens": nb_tokens,
                     "duree_s": round(duree, 2),
                     "energie_kWh": energie,
-                    "joules": round(joules, 1),
+                    "joules": round(joules, 1),                          # methode 1 : CodeCarbon (estimation)
+                    "joules_pmic": round(pmic.energie_joules, 1),        # methode 2 : PMIC (mesure reelle onboard)
+                    "joules_pmic_cpu": round(pmic.energie_par_rail.get("VDD_CORE", 0), 1),  # rail CPU seul
+                    "w_moyen_pmic": round(pmic.puissance_moyenne_w, 2),  # puissance moyenne onboard
                 })
 
                 print(f"[{config['quantification']}] [max_tokens={max_tokens}] "
                       f"[run {run + 1}/{N_REPETITIONS}] ({fiche['classe']}) "
-                      f"{prompt[:30]}...  ->  {nb_tokens} tok, {duree:.2f} s, {joules:.1f} J")
+                      f"{prompt[:30]}...  ->  {nb_tokens} tok, {duree:.2f} s, "
+                      f"{joules:.1f} J (CodeCarbon) / {pmic.energie_joules:.1f} J (PMIC)")
 
 # 4. Ecrire TOUS les resultats dans un seul CSV horodate
 horodatage = datetime.now().strftime("%Y-%m-%d_%Hh%M")
