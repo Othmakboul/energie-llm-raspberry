@@ -50,6 +50,11 @@ for config in MODELES:
         for fiche in fiches:
             prompt = fiche["prompt"]
             for run in range(N_REPETITIONS):
+                # Vider le cache du modele -> chaque repetition refait la LECTURE complete
+                # du prompt (prefill). Sinon llama.cpp reutilise le prompt deja traite et
+                # les runs 2,3... ne mesurent plus que la generation (biais a la baisse).
+                modele.reset()
+
                 tracker = EmissionsTracker(save_to_file=False, log_level="error")
                 tracker.start()
                 debut = time.perf_counter()
