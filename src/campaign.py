@@ -6,9 +6,7 @@ import os
 import time
 from datetime import datetime
 
-# ============================================================
 #  REGLAGES DE LA CAMPAGNE  (tout se modifie ICI)
-# ============================================================
 MACHINE = "PC"                          # "PC" maintenant, "Pi5" plus tard
 TEMPERATURE = 0.0                       # 0 = reponses deterministes (reproductibles)
 N_REPETITIONS = 3                       # nb de mesures par configuration
@@ -21,7 +19,6 @@ MODELES = [
     {"nom": "Llama-3.2-1B", "quantification": "Q4_K_M", "path": "models/Llama-3.2-1B-Instruct-Q4_K_M.gguf"},
     {"nom": "Llama-3.2-1B", "quantification": "Q8_0",   "path": "models/Llama-3.2-1B-Instruct-Q8_0.gguf"},
 ]
-# ============================================================
 
 # 1. Charger notre echantillon fige de prompts (cree par build_prompts.py)
 with open("prompts/prompts.json", encoding="utf-8") as f:
