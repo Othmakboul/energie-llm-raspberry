@@ -10,6 +10,7 @@ donc n_ctx pour que les grands prompts ne soient PAS tronques.
 
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
+from pmic import MesurePMIC      # methode 2 : mesure onboard REELLE du Pi 5 (mock hors Pi) [Amine]
 import pandas as pd
 import time
 from datetime import datetime
@@ -68,7 +69,9 @@ for taille in TAILLES_ENTREE:
         tracker.start()
         debut = time.perf_counter()
 
-        sortie = modele(prompt, max_tokens=MAX_TOKENS_SORTIE, temperature=TEMPERATURE)
+        # Le PMIC echantillonne la puissance onboard en // pendant l'inference (methode 2)
+        with MesurePMIC() as pmic:
+            sortie = modele(prompt, max_tokens=MAX_TOKENS_SORTIE, temperature=TEMPERATURE)
 
         duree = time.perf_counter() - debut
         tracker.stop()
@@ -89,12 +92,15 @@ for taille in TAILLES_ENTREE:
             "run": run + 1,
             "duree_s": round(duree, 2),
             "energie_kWh": energie,
-            "joules": round(joules, 1),
+            "joules": round(joules, 1),                          # methode 1 : CodeCarbon (estimation)
+            "joules_pmic": round(pmic.energie_joules, 1),        # methode 2 : PMIC (mesure reelle onboard)
+            "joules_pmic_cpu": round(pmic.energie_par_rail.get("VDD_CORE", 0), 1),  # rail CPU seul
+            "w_moyen_pmic": round(pmic.puissance_moyenne_w, 2),  # puissance moyenne onboard
         })
 
         print(f"[entree~{taille}] [run {run + 1}/{N_REPETITIONS}] "
               f"-> {input_tokens} tok in / {output_tokens} tok out, "
-              f"{duree:.2f} s, {joules:.1f} J")
+              f"{duree:.2f} s, {joules:.1f} J (CodeCarbon) / {pmic.energie_joules:.1f} J (PMIC)")
 
 # 5. Sauvegarde CSV horodate
 horodatage = datetime.now().strftime("%Y-%m-%d_%Hh%M")
