@@ -12,7 +12,7 @@ from datetime import datetime
 # ============================================================
 #  REGLAGES DE LA CAMPAGNE  (tout se modifie ICI)
 # ============================================================
-MACHINE = "PC"                          # "PC" maintenant, "Pi5" plus tard
+MACHINE = "Pi5"                         # "PC" maintenant, "Pi5" plus tard
 TEMPERATURE = 0.0                       # 0 = reponses deterministes (reproductibles)
 N_REPETITIONS = 3                       # nb de mesures par configuration
 MAX_TOKENS_VALEURS = [16, 64, 256]      # grille de longueurs de reponse a tester
@@ -20,13 +20,13 @@ MAX_TOKENS_VALEURS = [16, 64, 256]      # grille de longueurs de reponse a teste
 # --- Methode 3 : prise connectee (mesure au mur) ---
 MESURER_PRISE = True                    # False = on n'utilise pas la prise
 PRISE_NODE_ID = 2                       # numero du noeud de la prise (voir zwave-js-ui apres appairage)
-BASELINE_W = 0.0                        # puissance idle au mur a soustraire (W). Mesurer Pi au repos :
+BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W). Mesurer Pi au repos :
                                         #   python src/prise.py --duree 120   -> reporter la "Puissance moyenne"
 
 # Liste des modeles a tester : on en ajoute/enleve autant qu'on veut.
 # (Il faut que le fichier .gguf existe dans models/ ; sinon il est ignore.)
 MODELES = [
-    {"nom": "Llama-3.2-1B", "quantification": "Q2_K",   "path": "models/Llama-3.2-1B-Instruct-Q2_K.gguf"},
+    {"nom": "Llama-3.2-1B", "quantification": "Q3_K_L", "path": "models/Llama-3.2-1B-Instruct-Q3_K_L.gguf"},
     {"nom": "Llama-3.2-1B", "quantification": "Q4_K_M", "path": "models/Llama-3.2-1B-Instruct-Q4_K_M.gguf"},
     {"nom": "Llama-3.2-1B", "quantification": "Q8_0",   "path": "models/Llama-3.2-1B-Instruct-Q8_0.gguf"},
 ]
