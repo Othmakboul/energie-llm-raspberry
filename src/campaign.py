@@ -26,9 +26,9 @@ BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 # Liste des modeles a tester : on en ajoute/enleve autant qu'on veut.
 # (Il faut que le fichier .gguf existe dans models/ ; sinon il est ignore.)
 MODELES = [
-    {"nom": "Llama-3.2-1B", "quantification": "Q3_K_L", "path": "models/Llama-3.2-1B-Instruct-Q3_K_L.gguf"},
-    {"nom": "Llama-3.2-1B", "quantification": "Q4_K_M", "path": "models/Llama-3.2-1B-Instruct-Q4_K_M.gguf"},
-    {"nom": "Llama-3.2-1B", "quantification": "Q8_0",   "path": "models/Llama-3.2-1B-Instruct-Q8_0.gguf"},
+    {"nom": "Qwen2.5-1.5B", "quantification": "Q3_K_L", "path": "models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf"},
+    {"nom": "Qwen2.5-1.5B", "quantification": "Q4_K_M", "path": "models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf"},
+    {"nom": "Qwen2.5-1.5B", "quantification": "Q8_0",   "path": "models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"},
 ]
 # ============================================================
 
