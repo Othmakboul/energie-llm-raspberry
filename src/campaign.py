@@ -18,7 +18,7 @@ N_REPETITIONS = 3                       # nb de mesures par configuration
 MAX_TOKENS_VALEURS = [16, 64, 256]      # grille de longueurs de reponse a tester
 
 # --- Methode 3 : prise connectee (mesure au mur) ---
-MESURER_PRISE = True                    # False = on n'utilise pas la prise
+MESURER_PRISE = False                    # False = on n'utilise pas la prise
 PRISE_NODE_ID = 2                       # numero du noeud de la prise (voir zwave-js-ui apres appairage)
 BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W). Mesurer Pi au repos :
                                         #   python src/prise.py --duree 120   -> reporter la "Puissance moyenne"
