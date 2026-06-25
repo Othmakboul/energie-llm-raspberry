@@ -1,0 +1,1186 @@
+machine,modele,quantification,prompt,classe,n_caracteres,max_tokens,run,tokens,duree_s,energie_kWh,joules,joules_pmic,joules_pmic_cpu,w_moyen_pmic
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,16,1,16,1.18,2.8257015647219246e-06,10.2,7.2,4.9,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,16,2,16,1.17,2.7980359806707203e-06,10.1,6.1,3.9,5.39
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,16,3,16,1.25,2.9000437401149322e-06,10.4,6.3,4.1,5.56
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,16,4,16,1.17,2.8022431881875924e-06,10.1,5.9,3.9,5.87
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,16,5,16,1.17,2.801444811496199e-06,10.1,6.8,4.6,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,16,1,16,1.18,2.82036556965398e-06,10.2,6.3,4.1,5.57
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,16,2,16,1.16,2.787795761776912e-06,10.0,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,16,3,16,1.32,3.12058343291908e-06,11.2,6.3,4.1,5.57
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,16,4,16,1.16,2.792050627297563e-06,10.1,7.2,4.9,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,16,5,16,1.16,2.7856925106380305e-06,10.0,6.9,4.7,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,16,1,16,1.26,2.974028260888433e-06,10.7,7.5,5.0,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,16,2,16,1.17,2.799761633672156e-06,10.1,7.0,4.7,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,16,3,16,1.16,2.7836302962322756e-06,10.0,6.5,4.2,5.72
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,16,4,16,1.16,2.775268178338065e-06,10.0,6.5,4.3,5.72
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,16,5,16,1.16,2.7861499819814908e-06,10.0,6.7,4.5,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,16,1,16,1.26,2.975380470806777e-06,10.7,6.8,4.6,6.0
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,16,2,16,1.17,2.7957434848473175e-06,10.1,6.2,3.9,5.46
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,16,3,16,1.18,2.8221830292759854e-06,10.2,6.1,4.1,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,16,4,16,1.16,2.787287858009996e-06,10.0,6.8,4.5,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,16,5,16,1.18,2.8079810617908995e-06,10.1,6.9,4.6,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,16,1,16,1.2,2.8567395278873094e-06,10.3,7.1,4.8,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,16,2,16,1.17,2.7998004509863356e-06,10.1,6.6,4.3,5.82
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,16,3,16,1.16,2.7860640903314366e-06,10.0,6.8,4.6,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,16,4,16,1.17,2.803719964800091e-06,10.1,6.5,4.3,5.73
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,16,5,16,1.16,2.78429642824464e-06,10.0,6.5,4.4,5.81
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,16,1,16,1.22,2.900833153732453e-06,10.4,5.2,3.3,5.7
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,16,2,16,1.16,2.774295126097635e-06,10.0,6.5,4.3,5.8
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,16,3,16,1.16,2.783468128836053e-06,10.0,6.1,4.1,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,16,4,16,1.25,2.8980653763673286e-06,10.4,6.2,4.0,5.47
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,16,5,16,1.16,2.785464088031486e-06,10.0,6.3,4.1,5.63
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,16,1,16,1.23,2.903747814898607e-06,10.5,6.9,4.6,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,16,2,16,1.26,2.9210501151882457e-06,10.5,6.5,4.2,5.75
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,16,3,16,1.16,2.785478994699476e-06,10.0,6.6,4.3,5.85
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,16,4,16,1.17,2.7918206344451715e-06,10.1,6.8,4.5,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,16,5,16,1.16,2.786011417965068e-06,10.0,7.0,4.8,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,16,1,16,1.29,3.045793375206243e-06,11.0,6.6,4.3,5.84
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,16,2,16,1.16,2.7812964820493847e-06,10.0,6.6,4.4,5.85
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,16,3,16,1.16,2.77510105629582e-06,10.0,6.9,4.6,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,16,4,16,1.16,2.780127944074038e-06,10.0,5.7,3.7,5.69
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,16,5,16,1.16,2.7788546254030494e-06,10.0,6.8,4.6,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,16,1,16,1.23,2.9167663122921293e-06,10.5,6.5,4.2,5.72
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,16,2,16,1.15,2.7724105029717248e-06,10.0,6.8,4.5,6.0
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,16,3,16,1.16,2.783534582385583e-06,10.0,6.1,4.1,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,16,4,16,1.16,2.7788282142352003e-06,10.0,5.5,3.7,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,16,5,16,1.16,2.790721732209007e-06,10.0,6.1,4.2,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,16,1,16,1.27,3.021491624394731e-06,10.9,6.4,4.2,5.69
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,16,2,16,1.17,2.7878467471322694e-06,10.0,6.5,4.3,5.77
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,16,3,16,1.17,2.792367484637332e-06,10.1,6.2,4.2,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,16,4,16,1.25,2.902602676046251e-06,10.4,6.3,4.1,5.62
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,16,5,16,1.16,2.781581823496566e-06,10.0,6.9,4.6,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,16,1,16,1.27,2.9979194109502245e-06,10.8,6.9,4.6,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,16,2,16,1.16,2.7857335265587607e-06,10.0,6.7,4.5,5.93
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,16,3,16,1.17,2.7925324255203198e-06,10.1,6.3,4.1,5.59
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,16,4,16,1.16,2.783439185187919e-06,10.0,6.7,4.4,5.94
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,16,5,16,1.16,3.102179816869116e-06,11.2,6.2,4.2,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,16,1,16,1.2,2.8587705880526305e-06,10.3,6.3,4.1,5.61
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,16,2,16,1.17,2.792045431451255e-06,10.1,7.0,4.8,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,16,3,16,1.17,2.8008661973089864e-06,10.1,6.6,4.4,5.97
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,16,4,16,1.16,2.772638955469433e-06,10.0,6.7,4.5,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,16,5,16,1.16,2.785569685703643e-06,10.0,7.0,4.7,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,16,1,16,1.25,2.960684723550996e-06,10.7,7.0,4.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,16,2,16,1.16,2.7855242235915006e-06,10.0,6.7,4.4,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,16,3,16,1.17,2.7895397434322274e-06,10.0,6.6,4.3,5.82
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,16,4,16,1.16,2.784222692457653e-06,10.0,7.0,4.7,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,16,5,16,1.25,2.9004853878184304e-06,10.4,6.4,4.1,5.68
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,16,1,16,1.25,2.954672644297904e-06,10.6,7.5,5.1,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,16,2,16,1.17,2.7913525314841597e-06,10.0,5.5,3.8,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,16,3,16,1.16,2.7880933684515305e-06,10.0,6.4,4.2,5.68
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,16,4,16,1.16,2.7776869440623575e-06,10.0,5.9,4.0,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,16,5,16,1.25,2.896487827068659e-06,10.4,6.3,4.1,5.57
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,16,1,16,1.25,2.9429410142721984e-06,10.6,6.6,4.3,5.41
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,16,2,16,1.16,2.7706524937368483e-06,10.0,5.1,3.4,5.68
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,16,3,16,1.16,2.7720723951944614e-06,10.0,6.8,4.5,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,16,4,16,1.15,2.7688576554998613e-06,10.0,6.8,4.5,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,16,5,16,1.16,2.7781171287389685e-06,10.0,6.8,4.5,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,16,1,16,1.35,3.2331786219597037e-06,11.6,7.9,5.3,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,16,2,16,1.18,2.8176858494156153e-06,10.1,6.0,4.0,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,16,3,16,1.17,2.803597783217389e-06,10.1,6.9,4.6,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,16,4,16,1.17,2.797624538869913e-06,10.1,6.7,4.5,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,16,5,16,1.25,2.9023684099220585e-06,10.4,6.2,4.0,5.51
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,16,1,16,1.36,3.2590801597269584e-06,11.7,8.0,5.7,6.54
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,16,2,16,1.18,2.8069868233620762e-06,10.1,7.0,4.7,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,16,3,16,1.18,2.8192711409615367e-06,10.1,6.7,4.4,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,16,4,16,1.18,2.8159062833413505e-06,10.1,6.9,4.7,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,16,5,16,1.18,2.8111537947729914e-06,10.1,6.4,4.1,5.65
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,16,1,16,1.36,3.2491625115044787e-06,11.7,8.0,5.6,6.52
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,16,2,16,1.17,2.7964418492539664e-06,10.1,6.7,4.4,5.9
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,16,3,16,1.16,2.7784102907418384e-06,10.0,6.6,4.4,5.87
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,16,4,16,1.19,2.831529717911588e-06,10.2,6.1,4.1,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,16,5,16,1.25,2.8991555704050474e-06,10.4,5.8,3.7,5.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,16,1,16,1.51,3.896027571789238e-06,14.0,8.3,5.6,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,16,2,16,1.18,2.8072679096206754e-06,10.1,6.8,4.7,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,16,3,16,1.17,2.7881790951836053e-06,10.0,6.9,4.6,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,16,4,16,1.19,2.828625576272172e-06,10.2,6.3,4.1,5.57
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,16,5,16,1.16,2.786543996368301e-06,10.0,5.9,3.9,5.86
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,16,1,16,1.36,3.2817018104168226e-06,11.8,7.2,5.0,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,16,2,16,1.17,2.7999915239409004e-06,10.1,6.7,4.5,5.89
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,16,3,16,1.18,2.8086825066109955e-06,10.1,6.9,4.6,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,16,4,16,1.18,2.8132699692441154e-06,10.1,6.9,4.7,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,16,5,16,1.17,2.7938256521768822e-06,10.1,6.0,3.9,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,16,1,16,1.32,3.1178400700967522e-06,11.2,6.3,4.2,5.54
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,16,2,16,1.18,2.8126894579885666e-06,10.1,6.6,4.4,5.86
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,16,3,16,1.17,2.79652312407644e-06,10.1,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,16,4,16,1.17,2.791808067248961e-06,10.1,7.0,4.7,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,16,5,16,1.17,2.8038049718916433e-06,10.1,6.1,4.0,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,16,1,16,1.55,3.959215669025932e-06,14.3,9.3,6.4,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,16,2,16,1.25,2.9029766076084504e-06,10.5,6.6,4.4,5.84
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,16,3,16,1.17,2.7983074905521196e-06,10.1,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,16,4,16,1.16,2.7895838118688345e-06,10.0,6.7,4.4,5.88
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,16,5,16,1.16,2.77530727204149e-06,10.0,6.5,4.2,5.73
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,16,1,16,1.33,3.173078917499242e-06,11.4,7.4,5.1,6.52
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,16,2,16,1.17,2.7912159680856236e-06,10.0,6.8,4.6,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,16,3,16,1.17,2.797989409490329e-06,10.1,6.5,4.3,5.81
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,16,4,16,1.16,2.7857136362447842e-06,10.0,6.7,4.5,5.94
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,16,5,16,1.16,2.7786448796970867e-06,10.0,5.8,3.9,5.82
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,16,1,16,1.4,3.4044470444140144e-06,12.3,8.0,5.3,5.88
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,16,2,16,1.17,2.797616394851148e-06,10.1,6.7,4.5,5.9
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,16,3,16,1.17,2.8006693143498005e-06,10.1,7.0,4.7,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,16,4,16,1.25,2.904887009914523e-06,10.5,6.4,4.2,5.69
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,16,5,16,1.16,2.78572455471722e-06,10.0,6.5,4.3,5.78
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,16,1,16,1.34,3.1726552394663413e-06,11.4,7.2,5.1,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,16,2,16,1.16,2.7835294357699575e-06,10.0,7.0,4.7,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,16,3,16,1.16,2.7817487551982954e-06,10.0,6.0,4.0,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,16,4,16,1.16,2.780364778844738e-06,10.0,7.0,4.7,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,16,5,16,1.17,2.8069414434390462e-06,10.1,6.7,4.4,5.96
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,16,1,16,1.38,3.3354142890507173e-06,12.0,8.2,5.7,6.6
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,16,2,16,1.16,2.791438063805822e-06,10.0,6.7,4.5,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,16,3,16,1.18,2.810141524122896e-06,10.1,6.8,4.7,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,16,4,16,1.18,2.82366954114024e-06,10.2,5.5,3.5,5.44
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,16,5,16,1.17,2.7928920130506578e-06,10.1,6.6,4.4,5.85
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,16,1,16,1.48,3.4292173832513013e-06,12.3,8.4,5.9,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,16,2,16,1.17,2.8033622304122633e-06,10.1,5.9,3.9,5.9
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,16,3,16,1.17,2.7985607303922104e-06,10.1,7.2,4.9,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,16,4,16,1.16,2.7791150639790645e-06,10.0,7.0,4.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,16,5,16,1.16,2.7786277380095605e-06,10.0,5.4,3.6,5.95
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,16,1,16,1.34,3.2003031518249607e-06,11.5,7.4,5.2,6.53
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,16,2,16,1.16,2.7891492608670624e-06,10.0,5.9,3.9,5.94
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,16,3,16,1.16,2.775951850429435e-06,10.0,6.9,4.6,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,16,4,16,1.16,2.782443597794518e-06,10.0,6.8,4.6,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,16,5,16,1.17,2.792060397891537e-06,10.1,6.9,4.6,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,16,1,16,1.37,3.1719612993867982e-06,11.4,6.7,4.3,5.42
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,16,2,16,1.17,2.7974031135649666e-06,10.1,6.1,4.1,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,16,3,16,1.17,2.7933456861868994e-06,10.1,6.1,4.1,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,16,4,16,1.17,2.7984107620795347e-06,10.1,6.4,4.1,5.66
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,16,5,16,1.17,2.7994621590700535e-06,10.1,6.6,4.3,5.85
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,16,1,16,1.31,3.101021758766349e-06,11.2,7.6,5.2,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,16,2,16,1.17,2.7884238907202485e-06,10.0,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,16,3,16,1.18,2.8188707590224893e-06,10.1,7.0,4.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,16,4,16,1.17,2.802082556963303e-06,10.1,6.8,4.6,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,16,5,16,1.17,2.794736580015613e-06,10.1,6.9,4.6,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,16,1,16,1.56,3.979384890125458e-06,14.3,9.0,6.4,6.59
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,16,2,16,1.16,2.7791713819391807e-06,10.0,6.9,4.6,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,16,3,16,1.16,2.780203529839482e-06,10.0,6.8,4.6,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,16,4,16,1.16,2.7824089511427875e-06,10.0,6.9,4.7,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,16,5,16,1.16,2.7886259783358747e-06,10.0,5.2,3.4,5.78
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,16,1,16,1.69,4.182031681993733e-06,15.1,9.7,6.6,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,16,2,16,1.16,2.7773450396881584e-06,10.0,6.5,4.3,5.8
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,16,3,16,1.16,2.78113537329147e-06,10.0,6.9,4.7,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,16,4,16,1.25,2.8986550110244033e-06,10.4,6.2,4.0,5.48
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,16,5,16,1.17,2.7951225406003623e-06,10.1,6.1,4.1,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,16,1,16,1.44,3.5924600862013408e-06,12.9,7.8,5.5,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,16,2,16,1.17,2.7964285297909594e-06,10.1,6.8,4.6,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,16,3,16,1.16,2.791069562377476e-06,10.0,5.4,3.6,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,16,4,16,1.17,2.7994850030287224e-06,10.1,6.2,4.0,5.52
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,16,5,16,1.25,2.9075186315163327e-06,10.5,6.6,4.4,5.89
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,16,1,16,1.64,4.0958718958017364e-06,14.7,9.6,6.8,6.59
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,16,2,16,1.17,2.791768880126336e-06,10.1,6.5,4.3,5.74
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,16,3,16,1.16,2.7866069886460287e-06,10.0,6.3,4.1,5.58
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,16,4,16,1.16,2.7929933413098913e-06,10.1,6.6,4.4,5.86
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,16,5,16,1.16,2.786020547233012e-06,10.0,6.1,4.1,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,16,1,16,1.6,4.00532123973411e-06,14.4,8.9,6.3,6.52
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,16,2,16,1.15,2.7669148500673273e-06,10.0,6.9,4.6,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,16,3,16,1.16,2.7863830753753985e-06,10.0,6.8,4.5,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,16,4,16,1.17,2.8048440924963046e-06,10.1,6.9,4.6,6.11
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,16,5,16,1.17,2.799678771703653e-06,10.1,6.9,4.7,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,16,1,16,1.49,3.7666716233856625e-06,13.6,8.2,5.6,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,16,2,16,1.16,2.7861714690682444e-06,10.0,6.9,4.7,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,16,3,16,1.17,2.802185613775076e-06,10.1,6.8,4.6,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,16,4,16,1.25,2.901576104838102e-06,10.4,6.4,4.2,5.65
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,16,5,16,1.17,2.8075765057687584e-06,10.1,6.9,4.7,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,16,1,16,1.49,3.8053699669601183e-06,13.7,8.2,5.5,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,16,2,16,1.17,2.8040499418407894e-06,10.1,6.8,4.5,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,16,3,16,1.17,2.794632617889867e-06,10.1,6.1,4.1,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,16,4,16,1.16,2.7801606382565305e-06,10.0,5.6,3.9,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,16,5,16,1.16,2.7769379135494748e-06,10.0,6.8,4.5,6.03
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,16,1,16,1.63,4.068986983754191e-06,14.6,9.6,6.6,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,16,2,16,1.17,2.804605600308307e-06,10.1,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,16,3,16,1.25,2.9014254153148267e-06,10.4,6.1,4.0,5.46
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,16,4,16,1.16,2.782116784786367e-06,10.0,6.8,4.5,5.97
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,16,5,16,1.19,2.8348863402971245e-06,10.2,7.0,4.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,16,1,16,1.6,4.0221758128220854e-06,14.5,10.3,7.4,7.06
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,16,2,16,1.16,2.780693462258588e-06,10.0,6.3,4.1,5.6
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,16,3,16,1.17,2.794131230766228e-06,10.1,6.8,4.6,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,16,4,16,1.16,2.7898643473150722e-06,10.0,5.7,3.7,5.71
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,16,5,16,1.17,2.795085120751828e-06,10.1,6.7,4.4,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,16,1,16,1.63,4.0776198581481244e-06,14.7,11.0,7.9,6.94
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,16,2,16,1.25,2.8947497344594923e-06,10.4,6.0,3.8,5.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,16,3,16,1.17,2.7950299858123996e-06,10.1,6.6,4.4,5.9
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,16,4,16,1.17,2.7999236389795115e-06,10.1,6.7,4.4,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,16,5,16,1.16,2.7883409627537045e-06,10.0,6.0,4.0,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,16,1,16,1.68,4.159792157647212e-06,15.0,10.8,7.8,6.82
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,16,2,16,1.17,2.7900082255505782e-06,10.0,5.4,3.5,5.96
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,16,3,16,1.17,2.7957278788772626e-06,10.1,6.6,4.4,5.84
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,16,4,16,1.17,2.7976118195266994e-06,10.1,6.3,4.0,5.58
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,16,5,16,1.15,2.7733075333844703e-06,10.0,6.5,4.3,5.81
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,16,1,16,2.23,5.5223615833379695e-06,19.9,15.0,11.0,7.04
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,16,2,16,1.16,2.7748079550054153e-06,10.0,5.3,3.6,5.94
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,16,3,16,1.15,2.7628232231313546e-06,9.9,6.2,4.2,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,16,4,16,1.15,2.764642788585905e-06,10.0,6.3,4.1,5.61
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,16,5,16,1.15,2.758920379403432e-06,9.9,5.2,3.3,5.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,16,1,16,1.49,3.813358325285973e-06,13.7,8.5,5.9,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,16,2,16,1.25,2.8961080917515697e-06,10.4,6.4,4.2,5.68
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,16,3,16,1.16,2.7737672291706306e-06,10.0,6.6,4.3,5.84
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,16,4,16,1.16,2.774998883703071e-06,10.0,6.1,4.1,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,16,5,16,1.16,2.776540323416727e-06,10.0,7.1,4.8,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,16,1,16,1.55,3.925783149367944e-06,14.1,8.5,6.0,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,16,2,16,1.15,2.772734934272418e-06,10.0,6.4,4.1,5.69
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,16,3,16,1.16,2.7739071281096927e-06,10.0,6.7,4.4,5.9
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,16,4,16,1.16,2.7732323953865052e-06,10.0,6.6,4.4,5.87
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,16,5,16,1.16,2.7747607170156564e-06,10.0,6.9,4.6,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,16,1,16,1.56,3.919839368567465e-06,14.1,8.6,6.0,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,16,2,16,1.15,2.765817159758302e-06,10.0,6.9,4.6,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,16,3,16,1.16,2.7726512705823726e-06,10.0,5.4,3.6,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,16,4,16,1.16,2.7825667456507316e-06,10.0,6.3,4.1,5.58
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,16,5,16,1.17,2.7898144446148615e-06,10.0,6.6,4.3,5.84
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,64,1,64,4.59,9.43695623555057e-06,34.0,27.2,18.2,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,64,2,64,4.54,9.378477395953682e-06,33.8,26.9,18.2,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,64,3,64,4.52,9.339924348067497e-06,33.6,28.1,19.0,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,64,4,64,4.54,9.442881315527939e-06,34.0,27.9,18.8,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,64,5,64,4.54,9.346847708020614e-06,33.6,27.7,18.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,64,1,64,4.54,9.368792140926473e-06,33.7,27.7,18.7,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,64,2,64,4.54,9.425881223556722e-06,33.9,28.1,19.0,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,64,3,64,4.53,9.355439212578956e-06,33.7,26.9,17.8,5.97
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,64,4,64,4.53,9.340143719557612e-06,33.6,28.3,19.2,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,64,5,64,4.55,9.438371988327985e-06,34.0,26.5,17.8,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,64,1,64,4.64,9.55365740694233e-06,34.4,29.9,20.7,6.49
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,64,2,64,4.54,9.345371459069087e-06,33.6,26.7,18.0,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,64,3,64,4.53,9.372536271082836e-06,33.7,28.2,19.2,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,64,4,64,4.54,9.366785182024794e-06,33.7,27.4,18.4,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,64,5,64,4.53,9.345698194079055e-06,33.6,28.2,19.1,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,64,1,64,4.63,9.520136350713813e-06,34.3,27.6,18.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,64,2,64,4.53,9.376357428557146e-06,33.8,28.3,19.1,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,64,3,64,4.54,9.344729524830306e-06,33.6,26.7,17.7,5.95
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,64,4,64,4.53,9.36408780136034e-06,33.7,27.5,18.4,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,64,5,64,4.53,9.401962544916097e-06,33.8,28.3,19.2,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,64,1,64,4.57,9.403126637392834e-06,33.9,28.2,19.0,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,64,2,64,4.53,9.386041557864171e-06,33.8,28.0,19.0,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,64,3,64,4.53,9.335412155749018e-06,33.6,27.6,18.9,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,64,4,64,4.52,9.381203894064249e-06,33.8,28.0,19.1,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,64,5,64,4.54,9.374395593644182e-06,33.7,27.3,18.5,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,64,1,64,4.61,9.494920374254184e-06,34.2,27.0,18.2,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,64,2,64,4.52,9.389048299791607e-06,33.8,27.8,19.0,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,64,3,64,4.51,9.344159733447458e-06,33.6,27.5,18.6,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,64,4,64,4.54,9.39115366152154e-06,33.8,28.0,18.9,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,64,5,64,4.51,9.306388011894653e-06,33.5,27.0,17.9,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,64,1,64,4.63,9.53273959750842e-06,34.3,28.3,18.9,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,64,2,64,4.52,9.341240907328299e-06,33.6,28.0,19.1,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,64,3,64,4.55,9.374016277968308e-06,33.7,27.3,18.6,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,64,4,64,4.54,9.349845345459209e-06,33.7,27.3,18.4,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,64,5,64,4.58,9.43867185946358e-06,34.0,27.8,18.9,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,64,1,64,4.69,9.618053073936927e-06,34.6,28.2,19.2,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,64,2,64,4.54,9.357712563757858e-06,33.7,27.0,18.1,6.0
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,64,3,64,4.53,9.371956199662871e-06,33.7,26.7,17.9,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,64,4,64,4.53,9.347595099029222e-06,33.7,27.3,18.3,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,64,5,64,4.55,9.383541801764042e-06,33.8,27.9,19.0,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,64,1,64,4.6,9.48037717007668e-06,34.1,28.1,19.0,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,64,2,64,4.53,9.407585516806999e-06,33.9,28.4,19.3,6.38
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,64,3,64,4.52,9.347935381541639e-06,33.7,27.6,18.8,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,64,4,64,4.54,9.360867897996977e-06,33.7,27.3,18.4,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,64,5,64,4.61,9.512735754976655e-06,34.2,27.6,18.7,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,64,1,62,4.56,9.435212409181393e-06,34.0,26.9,18.3,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,64,2,64,4.58,9.401817317413178e-06,33.8,27.6,18.6,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,64,3,64,4.54,9.395614429508737e-06,33.8,28.1,19.0,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,64,4,64,4.54,9.38912559976634e-06,33.8,28.1,19.0,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,64,5,64,4.56,9.46850244754439e-06,34.1,27.6,18.7,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,64,1,64,4.63,9.557062560042799e-06,34.4,27.6,18.6,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,64,2,64,4.53,9.314408100037365e-06,33.5,28.3,19.2,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,64,3,64,4.53,9.362935973550203e-06,33.7,27.0,18.3,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,64,4,64,4.51,9.304170825347609e-06,33.5,27.8,19.0,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,64,5,64,4.55,9.341302778393456e-06,33.6,27.0,18.2,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,64,1,64,4.58,9.431116895270934e-06,34.0,28.0,18.9,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,64,2,64,4.54,9.494950530280546e-06,34.2,27.0,18.2,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,64,3,64,4.51,9.346036166387195e-06,33.6,27.5,18.6,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,64,4,64,4.54,9.363063357419109e-06,33.7,28.1,19.1,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,64,5,64,4.53,9.375137464000497e-06,33.8,28.4,19.3,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,64,1,22,1.73,4.207828555785719e-06,15.1,10.2,6.8,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,64,2,22,1.65,4.098347405624842e-06,14.8,9.7,6.5,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,64,3,22,1.64,4.049677396205286e-06,14.6,9.3,6.1,5.92
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,64,4,22,1.64,4.0599406571829035e-06,14.6,8.4,5.5,5.79
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,64,5,22,1.64,4.060607070115821e-06,14.6,8.6,5.7,5.93
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,64,1,64,4.61,9.509110977143473e-06,34.2,28.8,19.5,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,64,2,64,4.54,9.407712177672673e-06,33.9,28.3,19.2,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,64,3,64,4.53,9.399698897726557e-06,33.8,26.1,17.6,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,64,4,64,4.51,9.356391290851798e-06,33.7,27.6,18.6,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,64,5,64,4.52,9.319251071852988e-06,33.5,26.7,17.7,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,64,1,64,4.63,9.555062527320875e-06,34.4,29.4,20.2,6.48
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,64,2,64,4.53,9.357123061210177e-06,33.7,26.3,17.6,6.03
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,64,3,64,4.52,9.312629998632067e-06,33.5,28.2,19.4,6.44
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,64,4,64,4.53,9.368849131035477e-06,33.7,26.4,17.7,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,64,5,64,4.55,9.391835358109087e-06,33.8,27.0,18.3,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,64,1,64,4.76,9.752886684430932e-06,35.1,29.4,20.1,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,64,2,64,4.53,9.366535028717336e-06,33.7,28.2,19.1,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,64,3,64,4.55,9.567126187698845e-06,34.4,27.6,18.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,64,4,64,4.53,9.304678694186108e-06,33.5,28.1,19.3,6.42
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,64,5,64,4.53,9.38846483465565e-06,33.8,25.7,17.1,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,64,1,64,4.72,9.6750321099046e-06,34.8,29.2,19.8,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,64,2,64,4.55,9.364432970512711e-06,33.7,26.9,18.0,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,64,3,64,4.53,9.351945529145535e-06,33.7,26.9,18.1,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,64,4,64,4.63,9.53649844156832e-06,34.3,27.4,18.4,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,64,5,64,4.52,9.33252048958991e-06,33.6,27.2,18.6,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,64,1,64,4.71,9.653376685206472e-06,34.8,29.0,19.7,6.43
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,64,2,64,4.53,9.42099175619342e-06,33.9,27.1,18.2,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,64,3,64,4.51,9.321507602400452e-06,33.6,28.2,19.1,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,64,4,64,4.55,9.412998970604201e-06,33.9,27.7,19.0,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,64,5,64,4.57,9.419455938417249e-06,33.9,28.6,19.4,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,64,1,64,4.86,9.912209027071872e-06,35.7,30.2,20.7,6.44
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,64,2,64,4.51,9.327402050065587e-06,33.6,26.9,18.2,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,64,3,64,4.54,9.395610531360037e-06,33.8,26.5,17.6,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,64,4,64,4.53,9.359289195378109e-06,33.7,27.8,18.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,64,5,64,4.52,9.343444042666408e-06,33.6,28.0,19.0,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,64,1,64,4.81,9.841459986998384e-06,35.4,28.4,19.1,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,64,2,64,4.58,9.466778195963253e-06,34.1,27.9,19.0,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,64,3,64,4.54,9.420592570140917e-06,33.9,26.9,17.8,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,64,4,64,4.52,9.372616069984203e-06,33.7,27.8,18.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,64,5,64,4.74,9.752602262086479e-06,35.1,28.4,19.2,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,64,1,64,4.69,9.622081465636615e-06,34.6,28.3,19.3,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,64,2,64,4.54,9.367334339374817e-06,33.7,27.6,18.6,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,64,3,64,4.51,9.361865590724294e-06,33.7,26.9,18.0,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,64,4,64,4.54,9.355863338627972e-06,33.7,27.5,18.8,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,64,5,64,4.51,9.338026111467156e-06,33.6,26.5,17.6,6.04
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,64,1,64,4.93,9.997705008320345e-06,36.0,29.2,19.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,64,2,64,4.54,9.385229279730726e-06,33.8,28.0,19.0,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,64,3,64,4.54,9.392075001672435e-06,33.8,28.0,19.0,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,64,4,64,4.61,9.503809482927071e-06,34.2,27.4,18.4,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,64,5,64,4.58,9.450327228311856e-06,34.0,27.0,18.1,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,64,1,64,4.7,9.638683872733746e-06,34.7,28.7,19.5,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,64,2,64,4.53,9.383624707959689e-06,33.8,28.6,19.5,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,64,3,64,4.53,9.398432778142994e-06,33.8,28.2,19.2,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,64,4,64,4.53,9.377359008939607e-06,33.8,27.8,18.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,64,5,64,4.54,9.352347726018035e-06,33.7,26.9,18.2,6.16
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,64,1,64,4.77,9.763865798685524e-06,35.1,29.1,19.9,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,64,2,64,4.52,9.323316322232968e-06,33.6,27.0,18.3,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,64,3,64,4.51,9.345598466572373e-06,33.6,26.9,18.1,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,64,4,64,4.53,9.377905124778481e-06,33.8,26.9,18.0,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,64,5,64,4.53,9.388141912059685e-06,33.8,27.9,18.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,64,1,31,2.42,5.3062352419544625e-06,19.1,14.1,9.6,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,64,2,28,2.06,4.449956470156164e-06,16.0,12.1,8.2,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,64,3,28,2.07,4.469466562335187e-06,16.1,11.3,7.5,5.95
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,64,4,28,2.07,4.4504937644336155e-06,16.0,12.4,8.3,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,64,5,28,2.08,4.471762313411586e-06,16.1,12.4,8.3,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,64,1,19,1.66,4.277166533511314e-06,15.4,9.2,6.4,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,64,2,19,1.44,3.5458726565696137e-06,12.8,7.7,5.2,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,64,3,19,1.42,3.460028231271521e-06,12.5,7.3,4.9,5.96
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,64,4,19,1.43,3.5147008699601356e-06,12.7,8.4,5.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,64,5,19,1.44,3.5573941398054445e-06,12.8,7.0,4.6,5.72
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,64,1,64,4.77,9.761738385294855e-06,35.1,30.1,20.4,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,64,2,64,4.56,9.453932363278223e-06,34.0,27.2,18.3,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,64,3,64,4.55,9.542019454849245e-06,34.4,27.4,18.5,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,64,4,64,4.53,9.38993723717664e-06,33.8,28.0,19.0,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,64,5,64,4.53,9.39035191811148e-06,33.8,28.0,19.0,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,64,1,64,4.72,9.686165685468778e-06,34.9,29.4,20.0,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,64,2,64,4.52,9.372447629212462e-06,33.7,28.2,19.1,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,64,3,64,4.52,9.391719636730749e-06,33.8,26.4,17.9,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,64,4,64,4.54,9.42858287120139e-06,33.9,27.3,18.5,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,64,5,64,4.53,9.341375245578734e-06,33.6,26.5,17.8,6.08
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,64,1,64,4.66,9.60840251306073e-06,34.6,27.2,18.3,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,64,2,64,4.51,9.322645207279617e-06,33.6,27.6,18.8,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,64,3,64,4.54,9.410034347892689e-06,33.9,28.3,19.2,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,64,4,64,4.54,9.404981890436888e-06,33.9,28.2,19.0,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,64,5,64,4.51,9.33236459955299e-06,33.6,27.6,18.7,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,64,1,64,4.72,9.680053865998754e-06,34.8,29.1,19.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,64,2,64,4.54,9.360768742711783e-06,33.7,27.0,17.9,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,64,3,64,4.53,9.365293463102668e-06,33.7,25.3,16.9,5.95
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,64,4,64,4.51,9.312778385995472e-06,33.5,28.2,19.2,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,64,5,64,4.54,9.408313498717456e-06,33.9,27.2,18.4,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,64,1,64,4.96,1.0108415162516224e-05,36.4,30.8,21.1,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,64,2,64,4.57,9.432610127283657e-06,34.0,27.0,18.1,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,64,3,64,4.57,9.42633554783179e-06,33.9,27.9,19.1,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,64,4,64,4.58,9.487595206696619e-06,34.2,28.6,19.5,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,64,5,64,4.54,9.425728481355136e-06,33.9,27.3,18.4,6.07
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,64,1,64,5.06,9.844849025086123e-06,35.4,32.8,22.8,6.52
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,64,2,64,4.53,9.387080856475497e-06,33.8,28.3,19.3,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,64,3,64,4.53,9.372181932871721e-06,33.7,28.1,19.1,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,64,4,64,4.53,9.44850502567224e-06,34.0,27.9,19.1,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,64,5,64,4.52,9.33494060016999e-06,33.6,27.4,18.5,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,64,1,64,4.84,1.00189845452702e-05,36.1,30.7,21.0,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,64,2,64,4.54,9.397046842977361e-06,33.8,26.4,17.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,64,3,64,4.53,9.366953848603787e-06,33.7,26.7,18.1,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,64,4,64,4.53,9.36166393095454e-06,33.7,28.1,19.0,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,64,5,64,4.56,9.383586479228925e-06,33.8,27.7,18.8,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,64,1,64,4.96,1.0130644914888256e-05,36.5,30.8,21.2,6.4
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,64,2,64,4.53,9.36935799529829e-06,33.7,28.3,19.2,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,64,3,64,4.55,9.470691845073089e-06,34.1,28.2,19.1,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,64,4,64,4.61,9.487460311315949e-06,34.2,27.5,18.4,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,64,5,64,4.53,9.360783515114891e-06,33.7,27.1,18.3,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,64,1,64,4.95,1.0032435544528837e-05,36.1,30.7,21.0,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,64,2,64,4.52,9.354371528526164e-06,33.7,28.0,19.0,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,64,3,64,4.53,9.364666003098093e-06,33.7,28.4,19.3,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,64,4,64,4.53,9.334141545286145e-06,33.6,27.0,17.9,6.0
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,64,5,64,4.54,9.478620409220152e-06,34.1,27.8,18.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,64,1,64,4.84,9.851952384764388e-06,35.5,29.4,19.9,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,64,2,64,4.51,9.389903931731737e-06,33.8,26.8,17.8,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,64,3,64,4.52,9.419322524898887e-06,33.9,28.1,19.1,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,64,4,64,4.54,9.407659596114747e-06,33.9,28.1,19.1,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,64,5,64,4.54,9.351903598489736e-06,33.7,27.8,18.8,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,64,1,64,4.87,1.0078852336546222e-05,36.3,30.5,21.0,6.48
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,64,2,64,4.52,9.353381968652681e-06,33.7,27.9,19.0,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,64,3,64,4.51,9.334844770218393e-06,33.6,27.0,18.2,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,64,4,64,4.54,9.360523464393981e-06,33.7,27.8,18.7,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,64,5,64,4.53,9.328188335296104e-06,33.6,27.8,18.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,64,1,64,4.97,1.0130116154864321e-05,36.5,31.6,21.8,6.4
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,64,2,64,4.53,9.329087318416088e-06,33.6,28.1,19.1,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,64,3,64,4.54,9.390540764139833e-06,33.8,27.6,18.4,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,64,4,64,4.53,9.346160080961038e-06,33.6,28.0,19.0,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,64,5,64,4.67,9.617088504272294e-06,34.6,27.6,18.7,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,64,1,64,4.96,1.0079027806767285e-05,36.3,31.8,22.0,6.48
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,64,2,64,4.53,9.364482460723398e-06,33.7,28.2,19.0,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,64,3,64,4.52,9.355912191488843e-06,33.7,28.2,19.2,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,64,4,64,4.54,9.448953344707585e-06,34.0,26.4,17.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,64,5,64,4.54,9.377255359375814e-06,33.8,26.9,18.2,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,64,1,64,5.0,1.017134443852776e-05,36.6,30.8,21.2,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,64,2,64,4.52,9.351920661965588e-06,33.7,26.7,18.0,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,64,3,64,4.53,9.382969511405225e-06,33.8,28.5,19.3,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,64,4,64,4.55,9.409353386380557e-06,33.9,27.0,18.1,6.15
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,64,5,64,4.53,9.346424021134107e-06,33.6,26.7,17.9,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,64,1,64,5.19,1.0562526920677531e-05,38.0,33.4,23.0,6.46
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,64,2,64,4.53,9.408657471052612e-06,33.9,26.5,17.7,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,64,3,64,4.64,9.55228612117255e-06,34.4,27.1,18.1,6.01
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,64,4,64,4.58,9.452616526852852e-06,34.0,27.1,18.2,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,64,5,64,4.61,9.529524176522384e-06,34.3,28.2,19.1,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,64,1,64,5.6,1.1965071653881953e-05,43.1,35.7,25.0,6.63
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,64,2,64,4.53,9.34757623181891e-06,33.7,27.4,18.5,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,64,3,64,4.54,9.351635369453338e-06,33.7,27.8,19.0,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,64,4,64,4.53,9.32728434775609e-06,33.6,28.1,19.3,6.46
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,64,5,64,4.53,9.322573336253981e-06,33.6,27.0,18.2,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,64,1,64,4.94,1.0070386801603849e-05,36.3,29.1,19.6,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,64,2,64,4.54,9.39147441809637e-06,33.8,27.5,18.5,6.1
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,64,3,64,4.53,9.386629371800633e-06,33.8,27.2,18.3,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,64,4,64,4.52,9.32705436176871e-06,33.6,27.5,18.7,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,64,5,64,4.54,9.399454235041796e-06,33.8,28.3,19.3,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,64,1,59,4.65,9.619470272336793e-06,34.6,27.7,18.9,6.17
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,64,2,59,4.24,8.428780745343557e-06,30.3,24.7,16.6,6.13
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,64,3,59,4.44,9.193430316569548e-06,33.1,26.1,17.1,5.93
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,64,4,59,4.83,1.1313122562776927e-05,40.7,29.0,19.3,6.09
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,64,5,59,5.01,1.4363466986779458e-05,51.7,30.9,20.8,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,64,1,64,4.92,1.001141051366571e-05,36.0,30.7,21.2,6.48
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,64,2,64,4.51,9.370116222719716e-06,33.7,27.4,18.5,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,64,3,64,5.97,1.6050309438430897e-05,57.8,35.3,23.2,5.96
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,64,4,64,4.54,9.365171725646806e-06,33.7,28.4,19.5,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,64,5,64,4.53,9.37438782109379e-06,33.7,27.8,18.9,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,256,1,256,18.12,3.267971103591827e-05,117.6,116.8,80.4,6.45
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,256,2,256,18.17,3.282365500386e-05,118.2,113.8,77.4,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,256,3,256,18.09,3.2679817177547286e-05,117.6,113.7,77.3,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,256,4,256,18.1,3.267198950061361e-05,117.6,113.3,77.2,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Does cognitive empathy exist?,court,29,256,5,256,18.07,3.2650757041273596e-05,117.5,113.3,76.9,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,256,1,256,18.11,3.2771166559773835e-05,118.0,112.6,76.7,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,256,2,256,18.08,3.259923845694149e-05,117.4,114.3,77.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,256,3,256,18.08,3.2608410866937244e-05,117.4,113.8,77.8,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,256,4,256,18.07,3.2652075538531944e-05,117.5,114.6,78.5,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a movie review,court,23,256,5,256,18.09,3.266392850875518e-05,117.6,112.3,76.5,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,256,1,256,18.18,3.277179438382534e-05,118.0,112.4,76.2,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,256,2,256,18.1,3.281402315330645e-05,118.1,112.4,76.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,256,3,256,18.07,3.267666708261247e-05,117.6,112.6,76.8,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,256,4,256,18.09,3.2681457492112994e-05,117.7,114.7,78.4,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,Identify popular dishes in Mexico.,court,34,256,5,256,18.08,3.270551868396484e-05,117.7,112.8,76.6,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,256,1,256,18.18,3.287693188733899e-05,118.4,115.3,78.9,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,256,2,202,14.32,2.647838681342395e-05,95.3,89.0,60.4,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,256,3,202,14.39,2.6545611816113367e-05,95.6,89.2,60.6,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,256,4,202,14.34,2.653557175253929e-05,95.5,92.1,63.4,6.43
+Pi5,Llama-3.2-1B,Q4_K_M,What is unique about a hyperbole?,court,33,256,5,202,14.31,2.6416210799632604e-05,95.1,90.5,61.6,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,256,1,256,18.14,3.275772509220365e-05,117.9,114.4,78.4,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,256,2,256,18.08,3.265045436346364e-05,117.5,113.5,77.3,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,256,3,256,18.17,3.297008932280449e-05,118.7,112.8,76.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,256,4,256,18.13,3.269135702841173e-05,117.7,112.5,76.1,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Write an emergency response plan,court,32,256,5,256,18.1,3.265111029591148e-05,117.5,113.9,77.8,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,256,1,256,18.15,3.27872043556915e-05,118.0,113.2,76.8,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,256,2,256,18.1,3.2702083645416344e-05,117.7,114.6,78.3,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,256,3,256,18.09,3.2649988543501673e-05,117.5,112.1,76.1,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,256,4,256,18.09,3.265239922200555e-05,117.5,113.3,77.2,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Generate a quiz about physics.,court,30,256,5,256,18.1,3.269682107548926e-05,117.7,115.2,78.8,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,256,1,256,18.15,3.277652872545166e-05,118.0,113.3,77.2,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,256,2,256,18.08,3.2603322726141376e-05,117.4,113.9,77.9,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,256,3,256,18.09,3.2696472543581034e-05,117.7,113.0,76.9,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,256,4,256,18.08,3.260315415548094e-05,117.4,114.8,78.9,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,Develop a metaphor for hope.,court,28,256,5,256,18.22,3.2847254534320845e-05,118.3,114.1,77.8,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,256,1,256,18.22,3.282016655436159e-05,118.2,115.0,78.5,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,256,2,256,18.12,3.271375832629333e-05,117.8,114.9,78.4,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,256,3,256,18.09,3.272136625205515e-05,117.8,112.0,76.2,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,256,4,256,18.13,3.272979020508082e-05,117.8,114.0,78.0,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Summarize the poem ""Beat! Beat! Drums!""",court,39,256,5,256,18.1,3.2596189052333735e-05,117.3,114.7,78.6,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,256,1,163,11.62,2.2057330296945545e-05,79.4,73.0,50.0,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,256,2,163,11.57,2.1905767625902737e-05,78.9,72.0,49.1,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,256,3,163,11.59,2.19415976890782e-05,79.0,73.3,50.2,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,256,4,163,11.56,2.1926137914121055e-05,78.9,71.2,48.1,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the primary colors.,court,28,256,5,163,11.56,2.1906844955480228e-05,78.9,71.4,48.2,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,256,1,62,4.63,9.52366295923695e-06,34.3,27.6,18.6,6.12
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,256,2,85,6.07,1.1625524277603581e-05,41.9,37.7,25.7,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,256,3,85,6.07,1.1605257753039818e-05,41.8,37.6,25.6,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,256,4,85,6.08,1.1620994590230508e-05,41.8,37.8,25.6,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,Name two first aid treatments for a cut.,court,40,256,5,85,6.07,1.1607648946649682e-05,41.8,37.3,25.5,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,256,1,173,12.38,2.3066112687946636e-05,83.0,76.7,52.1,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,256,2,173,12.31,2.2884373102989815e-05,82.4,77.3,52.5,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,256,3,173,12.29,2.279306643153372e-05,82.1,76.5,52.1,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,256,4,173,12.27,2.2730202254044514e-05,81.8,75.9,51.7,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Write one sentence about handwashing.,court,37,256,5,173,12.28,2.2780682625678353e-05,82.0,76.3,52.1,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,256,1,95,6.83,1.3452263485848417e-05,48.4,42.6,29.0,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,256,2,95,6.78,1.33765388991122e-05,48.2,40.7,27.6,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,256,3,95,6.78,1.3322624907141135e-05,48.0,41.7,28.4,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,256,4,95,6.78,1.3336785915017072e-05,48.0,41.4,28.1,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,Who is Samantha Andrews?,court,24,256,5,95,6.77,1.3326930287049523e-05,48.0,42.5,29.1,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,256,1,22,1.74,4.206494676509123e-06,15.1,9.9,6.7,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,256,2,22,1.7,4.1415644831509534e-06,14.9,9.3,6.2,5.91
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,256,3,22,1.64,4.071505564108971e-06,14.7,8.7,5.8,5.98
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,256,4,22,1.64,4.040676427916626e-06,14.5,8.7,5.8,6.02
+Pi5,Llama-3.2-1B,Q4_K_M,What year did WW2 start?,court,24,256,5,22,1.64,4.056578788307002e-06,14.6,9.8,6.6,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,256,1,256,18.33,3.3219696399980856e-05,119.6,112.8,76.2,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,256,2,256,18.23,3.3013843646262655e-05,118.8,114.5,78.1,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,256,3,256,18.1,3.265347566151833e-05,117.6,114.7,78.4,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,256,4,256,18.08,3.264706887099682e-05,117.5,114.1,77.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Give 10 features of the sun.,court,28,256,5,256,18.09,3.263006918669945e-05,117.5,114.6,78.8,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,256,1,256,18.16,3.28491887809445e-05,118.3,113.5,77.2,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,256,2,256,18.1,3.269300313563995e-05,117.7,114.0,77.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,256,3,256,18.09,3.2610300091215374e-05,117.4,114.5,78.3,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,256,4,256,18.1,3.2727745109947924e-05,117.8,113.7,77.9,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Write a mock newspaper headline.,court,32,256,5,256,18.08,3.26447273916327e-05,117.5,113.8,77.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,256,1,256,18.32,3.3022788553681055e-05,118.9,115.0,78.4,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,256,2,256,18.1,3.2653020783483455e-05,117.6,113.5,77.6,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,256,3,256,18.11,3.27351467034277e-05,117.8,115.4,78.9,6.38
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,256,4,256,18.2,3.2831620514983666e-05,118.2,115.1,78.9,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,Create a data visualization of the latest COVID-19 cases in the US.,moyen,67,256,5,256,18.12,3.2717100610246065e-05,117.8,115.1,78.8,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,256,1,256,18.41,3.3193882627503954e-05,119.5,116.1,79.6,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,256,2,256,18.12,3.2698998711709074e-05,117.7,113.3,77.3,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,256,3,256,18.1,3.274697657653159e-05,117.9,113.2,77.3,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,256,4,256,18.1,3.274117832569092e-05,117.9,113.7,77.5,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Calculate the price after discount.
+Regular price: $100, Discount: 15%",moyen,70,256,5,256,18.22,3.2801004982826184e-05,118.1,113.0,76.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,256,1,92,6.75,1.3312859158253829e-05,47.9,41.5,28.6,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,256,2,158,11.21,2.0808509896167174e-05,74.9,68.3,45.9,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,256,3,158,11.24,2.0872245528868334e-05,75.1,70.7,48.4,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,256,4,158,11.22,2.084518740946261e-05,75.0,70.0,47.9,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Parse the given sentence grammatically.
+The small jar sat on the shelf.",moyen,71,256,5,158,11.22,2.0850545491164187e-05,75.1,69.4,47.3,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,256,1,256,18.46,3.3509364063632825e-05,120.6,115.6,79.0,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,256,2,256,18.1,3.273005413009543e-05,117.8,113.3,77.1,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,256,3,256,18.13,3.282881409802613e-05,118.2,114.0,77.9,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,256,4,256,18.1,3.268630644138972e-05,117.7,112.5,76.5,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite the given program in Java.
+a = 4
+b = 5
+c = a + b
+print(c)",moyen,65,256,5,256,18.12,3.274595463724913e-05,117.9,112.6,76.6,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,256,1,256,18.27,3.310400918310886e-05,119.2,113.2,77.0,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,256,2,256,18.15,3.275913294299024e-05,117.9,113.5,77.2,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,256,3,256,18.09,3.266667354067563e-05,117.6,111.5,75.4,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,256,4,256,18.1,3.2632954936991754e-05,117.5,112.5,76.5,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Based on the input, provide the correct spelling of the word.
+ambigious",moyen,71,256,5,256,18.09,3.2654782261794684e-05,117.6,114.5,78.3,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,256,1,256,18.25,3.291248459138854e-05,118.5,114.8,78.5,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,256,2,256,18.09,3.2650242418598854e-05,117.5,114.5,78.3,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,256,3,256,18.12,3.278461516023547e-05,118.0,114.3,77.9,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,256,4,256,18.2,3.2855140519340646e-05,118.3,114.3,77.8,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Construct a query that returns information about the Eiffel Tower.,moyen,66,256,5,256,18.12,3.2694270510323955e-05,117.7,114.8,78.5,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,256,1,256,18.48,3.34899975821612e-05,120.6,116.6,79.9,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,256,2,256,18.15,3.276111578500513e-05,117.9,114.2,78.1,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,256,3,256,18.12,3.274791771009158e-05,117.9,112.9,77.0,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,256,4,256,18.13,3.278146980488335e-05,118.0,113.9,77.7,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a set from the given input and find its size.
+[1, 2, 3, 2, 4, 2]",moyen,71,256,5,256,18.14,3.265373593676028e-05,117.6,113.3,77.2,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,256,1,193,13.86,2.600141724098432e-05,93.6,86.5,59.0,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,256,2,256,18.1,3.27205657589575e-05,117.8,113.7,77.5,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,256,3,256,18.12,3.2671566104735754e-05,117.6,114.6,78.2,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,256,4,256,18.09,3.263604771477178e-05,117.5,113.1,77.2,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"What are the different types of characters in the given play?
+Macbeth",moyen,69,256,5,256,18.1,3.271337987344236e-05,117.8,113.4,77.3,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,256,1,89,6.59,1.3022849819503391e-05,46.9,41.6,28.7,6.44
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,256,2,82,5.85,1.1707002517686182e-05,42.1,36.5,24.9,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,256,3,82,5.86,1.1688205333821507e-05,42.1,35.4,24.0,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,256,4,82,5.86,1.1657413149273345e-05,42.0,35.6,24.2,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Find the x-intercept of the line given by the equation.
+y = 4x + 10",moyen,67,256,5,82,5.86,1.1644787851571851e-05,41.9,35.4,23.9,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,256,1,31,2.42,5.2796717358088005e-06,19.0,13.2,8.9,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,256,2,28,2.07,4.452198623458856e-06,16.0,12.6,8.4,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,256,3,28,2.05,4.423878445997792e-06,15.9,12.6,8.6,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,256,4,28,2.07,4.44932605344582e-06,16.0,10.7,7.1,6.0
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the most suitable adverb for the following sentence
+She works",moyen,70,256,5,28,2.06,4.416985445633392e-06,15.9,11.5,7.6,6.05
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,256,1,19,1.63,4.035774989764868e-06,14.5,10.3,7.3,6.53
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,256,2,19,1.43,3.5101037770420866e-06,12.6,7.9,5.2,5.87
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,256,3,19,1.43,3.5027467285847014e-06,12.6,7.4,5.0,6.06
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,256,4,19,1.43,3.509505637122287e-06,12.6,7.3,4.9,5.99
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a sentence using the words ""caffeine"", ""hunter"", and ""monday"".",moyen,71,256,5,19,1.43,3.5057748230883796e-06,12.6,6.9,4.7,6.14
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,256,1,256,18.31,3.313583452745103e-05,119.3,115.4,78.8,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,256,2,256,18.09,3.2710973533071815e-05,117.8,115.0,79.0,6.43
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,256,3,256,18.12,3.2788668475655125e-05,118.0,114.6,78.5,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,256,4,256,18.1,3.2769849573999825e-05,118.0,113.1,76.7,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Sort the given words from most to least serious
+Sneeze, trip, shout",moyen,67,256,5,256,18.2,3.294519224855997e-05,118.6,114.3,77.9,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,256,1,256,18.27,3.29812617197749e-05,118.7,117.2,80.6,6.44
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,256,2,256,18.13,3.267544429510624e-05,117.6,113.4,77.0,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,256,3,256,18.09,3.268928172047359e-05,117.7,113.8,77.6,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,256,4,256,18.11,3.286261677706299e-05,118.3,113.3,77.2,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Come up with at least 5 ways to use deep learning in healthcare.,moyen,64,256,5,256,18.17,3.283420932106705e-05,118.2,112.8,76.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,256,1,256,18.23,3.296226510783158e-05,118.7,114.0,77.3,6.27
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,256,2,256,18.1,3.272300340057586e-05,117.8,115.4,79.2,6.38
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,256,3,256,18.09,3.2609911191536624e-05,117.4,113.4,77.2,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,256,4,256,18.15,3.272409053667783e-05,117.8,113.5,77.8,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,Describe the concept of artificial intelligence in your own words.,moyen,66,256,5,256,18.1,3.2611461712104317e-05,117.4,113.2,76.9,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,256,1,256,18.23,3.2909764771587393e-05,118.5,114.3,77.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,256,2,256,18.11,3.273443795628233e-05,117.8,113.4,77.7,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,256,3,256,18.08,3.259065551128105e-05,117.3,112.6,76.6,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,256,4,256,18.1,3.2632688839046576e-05,117.5,112.5,76.7,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,Follow the given example and create a poem about a passionate sunset.,moyen,69,256,5,256,18.11,3.282937867170706e-05,118.2,112.2,76.1,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,256,1,256,18.57,3.374788384707397e-05,121.5,117.0,80.2,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,256,2,256,18.14,3.270567917412033e-05,117.7,115.1,78.7,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,256,3,256,18.14,3.266159472956242e-05,117.6,114.2,77.9,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,256,4,256,18.14,3.2725901083269695e-05,117.8,112.9,76.4,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Create three subheadings that could be used to divide the news article.
+Tesla announced plans to develop a new battery technology that will increase the range of electric vehicles.",long,180,256,5,256,18.16,3.291846289381216e-05,118.5,113.8,77.6,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,256,1,256,18.66,3.3871491139772963e-05,121.9,118.6,81.3,6.41
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,256,2,256,18.2,3.2918618200592794e-05,118.5,114.1,77.7,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,256,3,256,19.05,3.59067717693838e-05,129.3,119.6,81.5,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,256,4,256,18.34,3.3083855876732674e-05,119.1,115.0,78.5,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a string word and a dictionary of words, determine whether the word is a valid word.
+String word: ""hello""
+Dictionary of words: { ""hi"", ""bye"", ""hello"", ""world"" }",long,166,256,5,256,18.31,3.371298180535698e-05,121.4,114.6,78.3,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,256,1,256,19.43,3.786894828163794e-05,136.3,123.3,84.2,6.4
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,256,2,256,18.58,3.5043794907156716e-05,126.2,115.5,78.5,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,256,3,256,18.21,3.327478910411938e-05,119.8,113.1,76.5,6.22
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,256,4,256,18.54,3.45561812597759e-05,124.4,117.0,79.7,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following conditions, formulate a hypothesis.
+Temperature, humidity, and precipitation levels are higher during the summer than the winter.",long,149,256,5,256,18.28,3.334923670029704e-05,120.1,116.6,79.6,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,256,1,256,18.57,3.36674114706231e-05,121.2,116.6,79.6,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,256,2,256,18.21,3.301667938050394e-05,118.9,115.5,78.9,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,256,3,256,18.33,3.357078874222179e-05,120.9,116.6,80.0,6.41
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,256,4,256,18.16,3.2763156472046716e-05,117.9,114.8,78.6,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,"Make an assumption based on the following data.
+90% of surveyed software developers work more than 8 hours a day, while only 10% work less than 8 hours a day",long,157,256,5,256,18.16,3.2761167108149245e-05,117.9,115.1,78.5,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,256,1,142,11.02,2.1475865226698786e-05,77.3,68.2,46.5,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,256,2,142,10.1,1.873075633005785e-05,67.4,64.6,44.5,6.42
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,256,3,142,10.16,1.9050920729893324e-05,68.6,64.2,43.9,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,256,4,142,10.08,1.8822503560939292e-05,67.8,62.9,42.8,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Given the following details, write a short paragraph about a vacation destination.
+Destination: Mexico 
+Time of Year: Summer 
+Activities: Swimming, fishing, snorkeling, zip-lining",long,179,256,5,142,10.08,1.880867292321055e-05,67.7,61.9,42.0,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,256,1,256,18.87,3.483085708487071e-05,125.4,119.1,81.3,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,256,2,256,18.18,3.27594555369549e-05,117.9,113.9,78.0,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,256,3,256,18.13,3.277417825890504e-05,118.0,112.8,77.0,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,256,4,256,18.13,3.269986557048102e-05,117.7,114.4,78.4,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Generate a random password with 8 characters containing at least one number, one special character, one capital letter and one lowercase letter.",long,144,256,5,256,18.12,3.2794843337915145e-05,118.1,115.6,79.4,6.43
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,256,1,256,18.47,3.3527530888706686e-05,120.7,116.9,80.1,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,256,2,256,18.13,3.272606897854636e-05,117.8,114.7,78.7,6.4
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,256,3,256,18.15,3.273108435996197e-05,117.8,113.5,77.3,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,256,4,256,18.14,3.266249327395167e-05,117.6,114.9,78.8,6.41
+Pi5,Llama-3.2-1B,Q4_K_M,"Edit the following to make it suitable for school-aged children.
+Bob and Bill were arguing over who was the best player on the basketball team.",long,143,256,5,256,18.15,3.273954390806478e-05,117.9,115.2,78.8,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,256,1,256,18.63,3.3861609959209084e-05,121.9,119.1,81.8,6.42
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,256,2,82,5.88,1.1732092706138461e-05,42.2,36.4,24.6,6.21
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,256,3,82,5.86,1.1683198300211695e-05,42.1,35.7,24.3,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,256,4,82,5.86,1.168904039786903e-05,42.1,36.1,24.6,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Given a description of a situation, provide an appropriate ethical judgement.
+A chef was not happy with the performance of a waiter, so he yelled and cursed at him in front of other people.",long,189,256,5,82,5.85,1.1674422798073706e-05,42.0,36.4,24.8,6.29
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,256,1,256,18.57,3.373795272522482e-05,121.5,116.5,79.6,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,256,2,256,18.13,3.2679552666456385e-05,117.6,112.3,76.4,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,256,3,256,18.15,3.2809104685095686e-05,118.1,113.7,77.7,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,256,4,256,18.13,3.271432923066711e-05,117.8,113.3,77.1,6.32
+Pi5,Llama-3.2-1B,Q4_K_M,"Rewrite this poem to make it more vivid and interesting.
+Once I had a house
+where I made a thousand memories
+It served me well
+but now I'm gone",long,143,256,5,256,18.15,3.2702271084926614e-05,117.7,113.1,76.7,6.24
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,256,1,184,13.48,2.531401228477649e-05,91.1,83.4,56.9,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,256,2,236,16.78,3.060703152737057e-05,110.2,105.7,72.2,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,256,3,236,16.77,3.061082352009273e-05,110.2,105.7,72.2,6.31
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,256,4,236,16.77,3.06774568717945e-05,110.4,104.8,71.1,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Categorize the following text into one of the genres: Comedy, Thriller, Romance, or Drama.
+Two kids from very different backgrounds meet in summer camp and form an unlikely friendship.",long,184,256,5,236,16.77,3.061852342339613e-05,110.2,103.0,69.5,6.2
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,256,1,118,8.9,1.7182264716201276e-05,61.9,57.3,39.6,6.51
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,256,2,98,6.98,1.3691113230702333e-05,49.3,43.2,29.6,6.39
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,256,3,98,6.98,1.3726538078487362e-05,49.4,41.7,28.3,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,256,4,98,6.99,1.3659433240622653e-05,49.2,43.3,29.3,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Label the following news article as either ""Political"" or ""Entertainment""
+Ansel Elgort and Gabrielle Union have both been cast in a new romantic summer movie to be released in 2022.",long,181,256,5,98,6.99,1.3712580014371276e-05,49.4,42.9,29.2,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,256,1,256,19.31,3.5426700756245785e-05,127.5,120.9,83.1,6.35
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,256,2,256,18.26,3.3007724238652635e-05,118.8,113.8,77.3,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,256,3,256,18.27,3.302758504699115e-05,118.9,111.6,75.3,6.18
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,256,4,256,18.25,3.291955867864867e-05,118.5,112.9,76.7,6.25
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify the sentence in the given paragraph that contains all the given words.
+Words: happiness, life, strive 
+Paragraph:
+Living your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don’t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",long,433,256,5,256,18.27,3.299999272533367e-05,118.8,116.2,79.4,6.37
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,256,1,173,12.6,2.3863753940320204e-05,85.9,78.6,53.8,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,256,2,194,13.77,2.5891601776366754e-05,93.2,86.0,58.7,6.34
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,256,3,194,13.76,2.5895831594764697e-05,93.2,85.4,57.9,6.28
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,256,4,194,13.76,2.584997097255359e-05,93.1,85.6,58.1,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Frame a one-sentence hypothesis given the following information.
+The goal of the study is to analyze the impact of online learning platforms on student performance.",long,164,256,5,194,13.76,2.5811554640033707e-05,92.9,86.5,59.1,6.36
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,256,1,59,4.63,9.471660979717934e-06,34.1,29.7,20.5,6.48
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,256,2,59,4.24,8.352573972935543e-06,30.1,25.1,17.0,6.23
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,256,3,59,4.25,8.356974312577218e-06,30.1,26.5,18.2,6.38
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,256,4,59,4.25,8.375092171219521e-06,30.2,26.0,17.8,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Identify if the given sentence is a rhetorical question or not. Output 1 for rhetorical question, and 0 for not.
+Are you out of your mind?",long,138,256,5,59,4.35,8.549547975789289e-06,30.8,26.2,17.7,6.19
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,256,1,256,18.64,3.3774499962658986e-05,121.6,115.9,78.6,6.26
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,256,2,256,18.18,3.278230195068569e-05,118.0,113.2,77.0,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,256,3,256,18.16,3.272430021607043e-05,117.8,114.2,78.0,6.33
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,256,4,256,18.17,3.270904168765412e-05,117.8,113.9,77.6,6.3
+Pi5,Llama-3.2-1B,Q4_K_M,"Create a short news article summarizing the following information.
+A new report from the World Health Organization suggests that mental health in adolescents is declining due to increased social media and technology use.",long,220,256,5,256,18.15,3.280040229256212e-05,118.1,114.6,78.3,6.34

@@ -1,0 +1,2 @@
+machine,nb_requetes,duree_lot_s,baseline_w,kwh_debut,kwh_fin,energie_mur_J,energie_mur_marginale_J,J_par_requete_mur,puissance_moyenne_mur_W,somme_J_pmic,somme_J_codecarbon,rendement_pmic_sur_mur_pct
+Pi5,1215,16391.8,3.5,11.113,11.113,0.0,-57371.3,0.0,0.0,63518.0,73789.5,
