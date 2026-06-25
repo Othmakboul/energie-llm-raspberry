@@ -8,15 +8,17 @@
 
 Stage : *Analyse énergétique de requêtes LLM sur Raspberry Pi 5* — LISTIC
 Binôme : **Amine** (outils de mesure) · **Othmane** (modèles légers) — Tuteur : S. Plassart
-Période : J1 = 08/06 → fin estimée 19/07. **Dernière mise à jour : 15/06/2026.**
+Période : J1 = 08/06 → **soutenance 15 ou 16/07/2026**. **Dernière mise à jour : 16/06/2026.**
 
 ---
 
 ## 1. Sujet en une phrase
 
 Mesurer **combien d'énergie consomme une requête** envoyée à un LLM léger quantifié qui
-tourne sur un **Raspberry Pi 5 (16 Go)**, et comprendre **quels paramètres** font varier
-cette consommation (longueur du prompt, tokens générés, quantification, paramètres d'inférence).
+tourne sur un **Raspberry Pi 5 (16 Go)**, comprendre **quels paramètres** font varier
+cette consommation (longueur du prompt, tokens générés, quantification, paramètres d'inférence),
+et en déduire la **composition optimale** (taille de modèle × quantification × paramètres
+d'inférence) qui **minimise le coût énergétique d'une requête**.
 
 ---
 
@@ -37,16 +39,34 @@ elle-même un résultat. → détail complet dans `architecture_mesure.md` et `e
 |---|---|---|
 | S1 — Machinerie de mesure sur PC (inference/measure/campaign → CSV) | S1 | ✅ **Fait** |
 | S2 — Mesure fiable (warm-up, répétitions) + état de l'art | S2 | ✅ quasi fait |
-| S2-S3 — Passage sur le Pi | S2-S3 | 🔄 **En cours** : Pi configuré + PMIC validé 09/06 ; **OS reflashé en 64-bit le 15/06** ; reste install `llama-cpp-python` + modèles + prise |
-| S3-S4 — Grande campagne de mesures (le gros CSV) | S3-S4 | ⏳ À venir |
+| S2-S3 — Passage sur le Pi | S2-S3 | ✅ **Fait** : Pi reflashé 64-bit, `llama-cpp-python` compilé, modèle 1B Q4 chargé (~13,9 tok/s), PMIC en mode réel |
+| S3-S4 — Grande campagne de mesures (le gros CSV) | S3-S4 | 🔄 **Démarrée** : 1re campagne triangulée sur le Pi le 15/06 (675 mesures) ; reste axes quantification + prise Z-Wave |
 | S4-S5 — Analyse + interface Streamlit | S4-S5 | ⏳ À venir |
 | S5-S6 — Rapport final | S5-S6 | ⏳ À venir |
 
-➡️ **Dans les temps**, avec une avance sur la partie matérielle (PMIC déjà validé en vrai).
+➡️ **Dans les temps**, avec une avance : la 1re campagne triangulée tourne déjà **sur le Pi** (pas seulement sur PC).
 
 ---
 
 ## 4. Réalisations concrètes (mesurées)
+
+**🆕 1re campagne triangulée RÉELLE sur le Pi 5 (15/06) — livrable de la semaine**
+- **675 mesures** : 45 prompts Alpaca × max_tokens [16/64/256] × 5 répétitions, sur le Pi 5.
+  CSV `resultats_Pi5_2026-06-15_14h45.csv`, colonnes PMIC (`joules_pmic`, `joules_pmic_cpu`,
+  `w_moyen_pmic`) remplies en parallèle de CodeCarbon → **triangulation opérationnelle sur le Pi**.
+- Résultats (médianes) :
+
+  | Mesure | Valeur |
+  |---|---|
+  | Énergie par token (PMIC) | **~0,43 J/token, stable** → loi E ∝ tokens confirmée *sur le Pi* |
+  | Écart CodeCarbon vs PMIC | **×1,51 à 16 tok → ×1,04 à 256 tok** (CodeCarbon surestime) |
+  | Puissance d'inférence | **~6 W** |
+  | Part CPU (VDD_CORE) / onboard | **≈ 68 %** |
+  | Débit | **~13,9 tok/s** (1B Q4 sur Pi 5) |
+
+  ⚠️ Les joules incluent l'idle (~1,5 W) → **soustraire la ligne de base** ; le PMIC ne voit pas
+  le 5 V → la prise donnera un total mur attendu > CodeCarbon. L'**écart entre méthodes est lui-même
+  un résultat** pour le rapport.
 
 **Mesure (Amine)**
 - État de l'art des outils → **insight clé : RAPL = x86 uniquement**, inutilisable sur ARM/Pi
@@ -78,35 +98,30 @@ elle-même un résultat. → détail complet dans `architecture_mesure.md` et `e
 
 ---
 
-## 5. Prochaines étapes (S2-S3)
+## 5. Prochaines étapes (S3)
 
-1. Sur le Pi reflashé : `git clone` + venv + `pip install -r requirements.txt` →
-   **vérifier que `llama-cpp-python` compile en 64-bit**, re-télécharger les `.gguf`.
-2. 1re **campagne triangulée sur le Pi** : `campaign.py` avec PMIC réel + ligne de base au repos.
-3. **Monter la pile Z-Wave** (Z-Stick 7 + ZW175) → 1re lecture scriptée du kWh cumulé (benchmark long).
-4. Faire varier les 4 paramètres (longueur prompt · max_tokens · quantification · params d'inférence).
+1. **Ligne de base idle** (`python src/pmic.py --duree 60`) à soustraire des joules mesurés.
+2. **Axe quantification** : télécharger Q2_K + Q8_0, relancer la campagne → comparer J/token.
+3. **Monter la pile Z-Wave** (Z-Stick 7 + ZW175) → 1re lecture scriptée du kWh cumulé (benchmark long) = 3e méthode.
+4. Petit **graphe J vs tokens** (PMIC vs CodeCarbon) pour le rapport / l'oral.
+5. Compléter les 4 paramètres (longueur prompt · max_tokens · quantification · params d'inférence).
 
 ---
 
-## 6. Questions / décisions à trancher avec les tuteurs
+## 6. Décisions actées au point du 16/06 ✅
 
-### 🔴 Bloquants
-1. **Réseau labo — Ethernet ne donne pas d'IP au Pi** (MAC probablement à enregistrer) →
-   SSH headless impossible, on travaille écran branché. *Demande : enregistrer la MAC / accès dédié.*
-2. **Prise connectée** : OK matériel fourni (Aeotec ZW175 + Z-Stick 7, Z-Wave) — reste à valider
-   une 1re lecture scriptée (pile Z-Wave JS).
+1. ✅ **Réseau labo réglé** — la **MAC du Pi est enregistrée** → SSH headless de nouveau possible
+   (plus besoin de l'écran branché en permanence → mesure plus propre).
+2. ✅ **Date de soutenance fixée : 15 ou 16/07/2026** → rétroplanning à caler dessus (≈ 4 sem restantes).
+3. ✅ **Méthodologie validée** — la **triangulation 3 méthodes** (CodeCarbon vs PMIC vs prise) est
+   approuvée ; les écarts entre méthodes sont acceptés comme un résultat.
+4. ✅ **Périmètre tranché — viser le MAXIMUM de modèles BIEN mesurés**, pour **trouver la composition
+   optimale qui minimise le coût énergétique d'une requête** (taille modèle × quantification ×
+   paramètres d'inférence). Le « bien mesurés » reste la contrainte : on n'élargit pas au prix de la rigueur.
 
-### 🟠 Organisation
-3. **Date de soutenance** — toujours pas confirmée. *À fixer pour caler le rétroplanning.*
-4. **Périmètre de la campagne** — combien de modèles viser ? Principe de descope :
-   **1 modèle bien mesuré > 4 mal mesurés.**
-
-### 🟢 Validation méthodo
-5. **Triangulation 3 méthodes** (CodeCarbon vs PMIC vs prise) — valider l'approche et que les
-   écarts attendus sont un résultat acceptable.
-6. **Limite du PMIC** (ne voit pas le 5 V) — confirmer que PMIC + prise couvre le besoin, ou
-   recommandent-ils un INA219/wattmètre USB-C inline en plus ?
+### Reste à faire (non bloquant)
+- **Prise connectée Z-Wave** (Aeotec ZW175 + Z-Stick 7) : valider une 1re lecture scriptée du kWh cumulé.
+- **Limite du PMIC** (ne voit pas le 5 V) : couverte par la prise au mur ; INA219/wattmètre inline en option si besoin de finesse.
 
 ### 💡 PFE 2027
-7. Objectif de capitalisation (**dataset Hugging Face** + repo reproductible) — leur avis / accord
-   pour publier en open-source.
+- Objectif de capitalisation (**dataset Hugging Face** + repo reproductible) — à confirmer pour publier en open-source.
