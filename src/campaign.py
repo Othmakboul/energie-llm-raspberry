@@ -26,10 +26,31 @@ BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 # Liste des modeles a tester : on en ajoute/enleve autant qu'on veut.
 # (Il faut que le fichier .gguf existe dans models/ ; sinon il est ignore.)
 MODELES = [
-    {"nom": "SmolLM2-1.7B", "quantification": "Q3_K_M", "path": "models/SmolLM2-1.7B-Instruct-Q3_K_M.gguf"},
-    {"nom": "SmolLM2-1.7B", "quantification": "Q4_K_M", "path": "models/SmolLM2-1.7B-Instruct-Q4_K_M.gguf"},
-    {"nom": "SmolLM2-1.7B", "quantification": "Q8_0",   "path": "models/SmolLM2-1.7B-Instruct-Q8_0.gguf"},
+    {"nom": "Gemma-3-1B", "quantification": "Q3_K_M", "path": "models/gemma-3-1b-it-Q3_K_M.gguf"},
+    {"nom": "Gemma-3-1B", "quantification": "Q4_K_M", "path": "models/gemma-3-1b-it-Q4_K_M.gguf"},
+    {"nom": "Gemma-3-1B", "quantification": "Q8_0",   "path": "models/gemma-3-1b-it-Q8_0.gguf"},
 ]
+# ---- CAMPAGNE n_threads : décommenter ce bloc, commenter le bloc ci-dessus ----
+# MODELES = []
+# for nom, quants, paths in [
+#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/llama-3.2-1b-instruct-q3_k_l.gguf","models/llama-3.2-1b-instruct-q4_k_m.gguf","models/llama-3.2-1b-instruct-q8_0.gguf"]),
+#     ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
+#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/qwen2.5-1.5b-instruct-q3_k_l.gguf","models/qwen2.5-1.5b-instruct-q4_k_m.gguf","models/qwen2.5-1.5b-instruct-q8_0.gguf"]),
+# ]:
+#     for q, p in zip(quants, paths):
+#         for t in [1, 2, 4]:
+#             MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": t, "n_ctx": 2048})
+
+# ---- CAMPAGNE n_ctx : décommenter ce bloc, commenter les blocs ci-dessus ----
+# MODELES = []
+# for nom, quants, paths in [
+#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/llama-3.2-1b-instruct-q3_k_l.gguf","models/llama-3.2-1b-instruct-q4_k_m.gguf","models/llama-3.2-1b-instruct-q8_0.gguf"]),
+#     ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
+#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/qwen2.5-1.5b-instruct-q3_k_l.gguf","models/qwen2.5-1.5b-instruct-q4_k_m.gguf","models/qwen2.5-1.5b-instruct-q8_0.gguf"]),
+# ]:
+#     for q, p in zip(quants, paths):
+#         for ctx in [512, 2048, 8192]:
+#             MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": 4, "n_ctx": ctx})
 # ============================================================
 
 # 1. Charger notre echantillon fige de prompts (cree par build_prompts.py)
@@ -55,7 +76,12 @@ with ctx_prise as prise:
         print(f"\n===== Modele {config['nom']} {config['quantification']} =====")
 
         # 3b. Charger CE modele (une fois) + inference de chauffe
-        modele = Llama(model_path=config["path"], verbose=False)
+        modele = Llama(
+            model_path=config["path"],
+            verbose=False,
+            n_threads=config.get("n_threads", 4),
+            n_ctx=config.get("n_ctx", 2048),
+        )
         modele("Bonjour", max_tokens=8, temperature=TEMPERATURE)
 
         # 3c. Boucles internes : max_tokens -> prompt -> repetitions
@@ -87,6 +113,8 @@ with ctx_prise as prise:
                         "machine": MACHINE,
                         "modele": config["nom"],
                         "quantification": config["quantification"],
+                        "n_threads": config.get("n_threads", 4),
+                        "n_ctx": config.get("n_ctx", 2048),
                         "prompt": prompt,
                         "classe": fiche["classe"],
                         "n_caracteres": fiche["n_caracteres"],
