@@ -26,9 +26,9 @@ BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 # Liste des modeles a tester : on en ajoute/enleve autant qu'on veut.
 # (Il faut que le fichier .gguf existe dans models/ ; sinon il est ignore.)
 MODELES = [
-    {"nom": "Gemma-3-1B", "quantification": "Q3_K_M", "path": "models/gemma-3-1b-it-Q3_K_M.gguf"},
-    {"nom": "Gemma-3-1B", "quantification": "Q4_K_M", "path": "models/gemma-3-1b-it-Q4_K_M.gguf"},
-    {"nom": "Gemma-3-1B", "quantification": "Q8_0",   "path": "models/gemma-3-1b-it-Q8_0.gguf"},
+    {"nom": "SmolLM2-1.7B", "quantification": "Q3_K_M", "path": "models/SmolLM2-1.7B-Instruct-Q3_K_M.gguf"},
+    {"nom": "SmolLM2-1.7B", "quantification": "Q4_K_M", "path": "models/SmolLM2-1.7B-Instruct-Q4_K_M.gguf"},
+    {"nom": "SmolLM2-1.7B", "quantification": "Q8_0",   "path": "models/SmolLM2-1.7B-Instruct-Q8_0.gguf"},
 ]
 # ============================================================
 
