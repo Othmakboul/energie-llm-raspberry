@@ -33,9 +33,9 @@ MODELES = [
 # ---- CAMPAGNE n_threads : décommenter ce bloc, commenter le bloc ci-dessus ----
 # MODELES = []
 # for nom, quants, paths in [
-#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/llama-3.2-1b-instruct-q3_k_l.gguf","models/llama-3.2-1b-instruct-q4_k_m.gguf","models/llama-3.2-1b-instruct-q8_0.gguf"]),
+#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
 #     ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
-#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/qwen2.5-1.5b-instruct-q3_k_l.gguf","models/qwen2.5-1.5b-instruct-q4_k_m.gguf","models/qwen2.5-1.5b-instruct-q8_0.gguf"]),
+#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
 # ]:
 #     for q, p in zip(quants, paths):
 #         for t in [1, 2, 4]:
@@ -44,9 +44,9 @@ MODELES = [
 # ---- CAMPAGNE n_ctx : décommenter ce bloc, commenter les blocs ci-dessus ----
 # MODELES = []
 # for nom, quants, paths in [
-#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/llama-3.2-1b-instruct-q3_k_l.gguf","models/llama-3.2-1b-instruct-q4_k_m.gguf","models/llama-3.2-1b-instruct-q8_0.gguf"]),
+#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
 #     ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
-#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/qwen2.5-1.5b-instruct-q3_k_l.gguf","models/qwen2.5-1.5b-instruct-q4_k_m.gguf","models/qwen2.5-1.5b-instruct-q8_0.gguf"]),
+#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
 # ]:
 #     for q, p in zip(quants, paths):
 #         for ctx in [512, 2048, 8192]:
