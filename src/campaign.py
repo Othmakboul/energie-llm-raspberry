@@ -25,21 +25,21 @@ BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 
 # Liste des modeles a tester : on en ajoute/enleve autant qu'on veut.
 # (Il faut que le fichier .gguf existe dans models/ ; sinon il est ignore.)
-MODELES = [
-    {"nom": "Gemma-3-1B", "quantification": "Q3_K_M", "path": "models/gemma-3-1b-it-Q3_K_M.gguf"},
-    {"nom": "Gemma-3-1B", "quantification": "Q4_K_M", "path": "models/gemma-3-1b-it-Q4_K_M.gguf"},
-    {"nom": "Gemma-3-1B", "quantification": "Q8_0",   "path": "models/gemma-3-1b-it-Q8_0.gguf"},
-]
+#MODELES = [
+#    {"nom": "Gemma-3-1B", "quantification": "Q3_K_M", "path": "models/gemma-3-1b-it-Q3_K_M.gguf"},
+#    {"nom": "Gemma-3-1B", "quantification": "Q4_K_M", "path": "models/gemma-3-1b-it-Q4_K_M.gguf"},
+#    {"nom": "Gemma-3-1B", "quantification": "Q8_0",   "path": "models/gemma-3-1b-it-Q8_0.gguf"},
+#]
 # ---- CAMPAGNE n_threads : décommenter ce bloc, commenter le bloc ci-dessus ----
-# MODELES = []
-# for nom, quants, paths in [
-#     ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
-#     ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
-#     ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
-# ]:
-#     for q, p in zip(quants, paths):
-#         for t in [1, 2, 4]:
-#             MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": t, "n_ctx": 2048})
+  MODELES = []
+  for nom, quants, paths in [
+      ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
+      ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
+      ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
+  ]:
+      for q, p in zip(quants, paths):
+          for t in [1, 2, 4]:
+              MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": t, "n_ctx": 2048})
 
 # ---- CAMPAGNE n_ctx : décommenter ce bloc, commenter les blocs ci-dessus ----
 # MODELES = []
