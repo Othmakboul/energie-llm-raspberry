@@ -18,8 +18,8 @@ N_REPETITIONS = 3                       # nb de mesures par configuration
 MAX_TOKENS_VALEURS = [16, 64, 256]      # grille de longueurs de reponse a tester
 
 # --- Methode 3 : prise connectee (mesure au mur) ---
-MESURER_PRISE = False                    # False = on n'utilise pas la prise
-PRISE_NODE_ID = 2                       # numero du noeud de la prise (voir zwave-js-ui apres appairage)
+MESURER_PRISE = True                     # True = on utilise la prise
+PRISE_NODE_ID = 3                       # numero du noeud de la prise (voir zwave-js-ui apres appairage)
 BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W). Mesurer Pi au repos :
                                         #   python src/prise.py --duree 120   -> reporter la "Puissance moyenne"
 
@@ -31,15 +31,15 @@ BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 #    {"nom": "Gemma-3-1B", "quantification": "Q8_0",   "path": "models/gemma-3-1b-it-Q8_0.gguf"},
 #]
 # ---- CAMPAGNE n_threads : décommenter ce bloc, commenter le bloc ci-dessus ----
-  MODELES = []
-  for nom, quants, paths in [
-      ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
-      ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
-      ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
-  ]:
-      for q, p in zip(quants, paths):
-          for t in [1, 2, 4]:
-              MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": t, "n_ctx": 2048})
+MODELES = []
+for nom, quants, paths in [
+    ("Llama-3.2-1B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Llama-3.2-1B-Instruct-Q3_K_L.gguf","models/Llama-3.2-1B-Instruct-Q4_K_M.gguf","models/Llama-3.2-1B-Instruct-Q8_0.gguf"]),
+    ("Gemma-3-1B",   ["Q3_K_M","Q4_K_M","Q8_0"], ["models/gemma-3-1b-it-Q3_K_M.gguf","models/gemma-3-1b-it-Q4_K_M.gguf","models/gemma-3-1b-it-Q8_0.gguf"]),
+    ("Qwen2.5-1.5B", ["Q3_K_L","Q4_K_M","Q8_0"], ["models/Qwen2.5-1.5B-Instruct-Q3_K_L.gguf","models/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf","models/Qwen2.5-1.5B-Instruct-Q8_0.gguf"]),
+]:
+    for q, p in zip(quants, paths):
+        for t in [1, 2, 4]:
+            MODELES.append({"nom": nom, "quantification": q, "path": p, "n_threads": t, "n_ctx": 2048})
 
 # ---- CAMPAGNE n_ctx : décommenter ce bloc, commenter les blocs ci-dessus ----
 # MODELES = []

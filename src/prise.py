@@ -59,7 +59,7 @@ except ImportError:
 #  REGLAGES PRISE  (a confirmer sur ton appareil apres appairage)
 # ============================================================
 URL_WS = "ws://localhost:3000"   # API zwave-js-server (embarquee dans zwave-js-ui)
-NODE_ID = 2                      # /!\ numero du noeud de la prise apres inclusion (a verifier dans l'UI)
+NODE_ID = 3                      # /!\ numero du noeud de la prise apres inclusion (a verifier dans l'UI)
 
 # Identifiants des valeurs Meter (Command Class 50 / 0x32) cote zwave-js.
 # Le `propertyKey` encode (type, scale). Valeurs typiques de la ZW175 :

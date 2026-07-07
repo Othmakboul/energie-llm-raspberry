@@ -11,8 +11,10 @@ donc n_ctx pour que les grands prompts ne soient PAS tronques.
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 from pmic import MesurePMIC      # methode 2 : mesure onboard REELLE du Pi 5 (mock hors Pi) [Amine]
+from prise import MesurePrise    # methode 3 : mesure au MUR via prise Z-Wave (mock hors Pi) [Amine]
 import pandas as pd
 import time
+import contextlib
 from datetime import datetime
 
 # ============================================================
@@ -27,6 +29,11 @@ N_REPETITIONS = 3
 MAX_TOKENS_SORTIE = 64                                    # SORTIE fixe (pour isoler l'effet entree)
 TAILLES_ENTREE = [128, 256, 512, 1024, 2048, 4096]       # longueurs d'entree a tester (en tokens)
 N_CTX = 8192                                              # fenetre de contexte (doit couvrir entree + sortie)
+
+# --- Methode 3 : prise connectee (mesure au mur) ---
+MESURER_PRISE = True                    # True = on utilise la prise
+PRISE_NODE_ID = 3                       # numero du noeud de la prise (voir zwave-js-ui apres appairage)
+BASELINE_W = 3.5                        # puissance idle au mur a soustraire (W)
 # ============================================================
 
 # Texte de base (anglais, comme le modele et Alpaca). On le repetera/tronquera
@@ -55,55 +62,89 @@ modele("Bonjour", max_tokens=8, temperature=TEMPERATURE)
 
 # 4. Boucle : pour chaque taille d'entree, fabriquer un prompt et mesurer
 resultats = []
-for taille in TAILLES_ENTREE:
-    # construire un prompt d'environ `taille` tokens (on coupe la reserve)
-    toks = reserve[:taille]
-    prompt = modele.detokenize(toks).decode("utf-8", errors="ignore")
 
-    for run in range(N_REPETITIONS):
-        # Vider le cache du modele -> chaque mesure refait la lecture complete (cold)
-        # sinon llama.cpp reutilise le prompt deja traite et la lecture n'est plus mesuree
-        modele.reset()
+# La prise se mesure au niveau du LOT entier (comme campaign.py) :
+ctx_prise = MesurePrise(node_id=PRISE_NODE_ID, baseline_w=BASELINE_W) if MESURER_PRISE else contextlib.nullcontext()
 
-        tracker = EmissionsTracker(save_to_file=False, log_level="error")
-        tracker.start()
-        debut = time.perf_counter()
+with ctx_prise as prise:
+    for taille in TAILLES_ENTREE:
+        # construire un prompt d'environ `taille` tokens (on coupe la reserve)
+        toks = reserve[:taille]
+        prompt = modele.detokenize(toks).decode("utf-8", errors="ignore")
 
-        # Le PMIC echantillonne la puissance onboard en // pendant l'inference (methode 2)
-        with MesurePMIC() as pmic:
-            sortie = modele(prompt, max_tokens=MAX_TOKENS_SORTIE, temperature=TEMPERATURE)
+        for run in range(N_REPETITIONS):
+            # Vider le cache du modele -> chaque mesure refait la lecture complete (cold)
+            # sinon llama.cpp reutilise le prompt deja traite et la lecture n'est plus mesuree
+            modele.reset()
 
-        duree = time.perf_counter() - debut
-        tracker.stop()
-        energie = tracker.final_emissions_data.energy_consumed
+            tracker = EmissionsTracker(save_to_file=False, log_level="error")
+            tracker.start()
+            debut = time.perf_counter()
 
-        # vraies longueurs comptees par le modele
-        input_tokens = sortie["usage"]["prompt_tokens"]
-        output_tokens = sortie["usage"]["completion_tokens"]
-        joules = energie * 3_600_000
+            # Le PMIC echantillonne la puissance onboard en // pendant l'inference (methode 2)
+            with MesurePMIC() as pmic:
+                sortie = modele(prompt, max_tokens=MAX_TOKENS_SORTIE, temperature=TEMPERATURE)
 
-        resultats.append({
-            "machine": MACHINE,
-            "modele": MODELE_NOM,
-            "quantification": QUANTIFICATION,
-            "taille_cible": taille,
-            "input_tokens": input_tokens,      # longueur d'entree REELLE
-            "output_tokens": output_tokens,    # sortie (fixe ~64)
-            "run": run + 1,
-            "duree_s": round(duree, 2),
-            "energie_kWh": energie,
-            "joules": round(joules, 1),                          # methode 1 : CodeCarbon (estimation)
-            "joules_pmic": round(pmic.energie_joules, 1),        # methode 2 : PMIC (mesure reelle onboard)
-            "joules_pmic_cpu": round(pmic.energie_par_rail.get("VDD_CORE", 0), 1),  # rail CPU seul
-            "w_moyen_pmic": round(pmic.puissance_moyenne_w, 2),  # puissance moyenne onboard
-        })
+            duree = time.perf_counter() - debut
+            tracker.stop()
+            energie = tracker.final_emissions_data.energy_consumed
 
-        print(f"[entree~{taille}] [run {run + 1}/{N_REPETITIONS}] "
-              f"-> {input_tokens} tok in / {output_tokens} tok out, "
-              f"{duree:.2f} s, {joules:.1f} J (CodeCarbon) / {pmic.energie_joules:.1f} J (PMIC)")
+            # vraies longueurs comptees par le modele
+            input_tokens = sortie["usage"]["prompt_tokens"]
+            output_tokens = sortie["usage"]["completion_tokens"]
+            joules = energie * 3_600_000
+
+            resultats.append({
+                "machine": MACHINE,
+                "modele": MODELE_NOM,
+                "quantification": QUANTIFICATION,
+                "taille_cible": taille,
+                "input_tokens": input_tokens,      # longueur d'entree REELLE
+                "output_tokens": output_tokens,    # sortie (fixe ~64)
+                "run": run + 1,
+                "duree_s": round(duree, 2),
+                "energie_kWh": energie,
+                "joules": round(joules, 1),                          # methode 1 : CodeCarbon (estimation)
+                "joules_pmic": round(pmic.energie_joules, 1),        # methode 2 : PMIC (mesure reelle onboard)
+                "joules_pmic_cpu": round(pmic.energie_par_rail.get("VDD_CORE", 0), 1),  # rail CPU seul
+                "w_moyen_pmic": round(pmic.puissance_moyenne_w, 2),  # puissance moyenne onboard
+            })
+
+            print(f"[entree~{taille}] [run {run + 1}/{N_REPETITIONS}] "
+                  f"-> {input_tokens} tok in / {output_tokens} tok out, "
+                  f"{duree:.2f} s, {joules:.1f} J (CodeCarbon) / {pmic.energie_joules:.1f} J (PMIC)")
 
 # 5. Sauvegarde CSV horodate
 horodatage = datetime.now().strftime("%Y-%m-%d_%Hh%M")
 chemin = f"data/raw/prompt_size_{MACHINE}_{horodatage}.csv"
 pd.DataFrame(resultats).to_csv(chemin, index=False)
 print(f"\n{len(resultats)} mesures enregistrees dans {chemin}")
+
+# 6. Resume PRISE (methode 3, niveau lot) + recoupement des 3 methodes
+if prise is not None and resultats:
+    nb = len(resultats)
+    somme_pmic = sum(r["joules_pmic"] for r in resultats)
+    somme_cc = sum(r["joules"] for r in resultats)
+    resume = {
+        "machine": MACHINE,
+        "nb_requetes": nb,
+        "duree_lot_s": round(prise.duree_s, 1),
+        "baseline_w": BASELINE_W,
+        "kwh_debut": prise.kwh_debut,
+        "kwh_fin": prise.kwh_fin,
+        "energie_mur_J": round(prise.energie_joules, 1),
+        "energie_mur_marginale_J": round(prise.energie_marginale_joules, 1),
+        "J_par_requete_mur": round(prise.energie_joules / nb, 1),
+        "puissance_moyenne_mur_W": round(prise.puissance_moyenne_w, 2),
+        "somme_J_pmic": round(somme_pmic, 1),
+        "somme_J_codecarbon": round(somme_cc, 1),
+        "rendement_pmic_sur_mur_pct": round(100 * somme_pmic / prise.energie_joules, 1) if prise.energie_joules else None,
+    }
+    chemin_prise = f"data/raw/prompt_size_{MACHINE}_{horodatage}_prise.csv"
+    pd.DataFrame([resume]).to_csv(chemin_prise, index=False)
+    prise.sauver_courbe_csv(f"data/raw/courbe_prise_prompt_size_{MACHINE}_{horodatage}.csv")
+    print(f"[prise] {resume['energie_mur_J']} J au mur sur {nb} requetes "
+          f"({resume['J_par_requete_mur']} J/req), rendement PMIC/mur {resume['rendement_pmic_sur_mur_pct']}% "
+          f"-> {chemin_prise}")
+    if prise.energie_joules == 0 and not prise.mock:
+        print("  /!\\ delta kWh = 0 : lot trop court pour la resolution du compteur -> rallonger.")

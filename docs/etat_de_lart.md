@@ -108,6 +108,61 @@ avec granularité à l'échelle de la requête, sur 3 architectures × 3 niveaux
 
 ---
 
+## 5. Validation littérature — campagnes S4 (n_ctx, n_threads, longueur de prompt)
+
+Trois résultats obtenus en S4 recoupent (ou comblent un angle mort de) la littérature récente.
+
+### 5.1 Loi quadratique énergie vs longueur de prompt
+
+Notre mesure (Llama-3.2-1B Q4_K_M, Pi5, sortie fixe 64 tok) donne un ajustement quadratique
+quasi parfait : E ≈ 0.000012·n² + 0.104·n + 29.6 J (R² = 1.000, n = 50 à 7 638 tokens), contre
+R² = 0.984 pour un ajustement linéaire seul.
+
+- **[16] Yuan et al., *Full Stack Optimization of Transformer Inference: a Survey*, 2023** —
+  fondement théorique : décompose le coût du prefill par couche en un terme linéaire
+  (projections QKV + FFN) et un terme quadratique (attention causale, O(n²)). Justifie *a
+  priori* la forme de notre loi, avant toute mesure.
+- **[17] Cavagna & Proia, *SweetSpot: An Analytical Model for Predicting Energy Efficiency of
+  LLM Inference*, ACM/SPEC ICPE 2026** — confirmation empirique récente : critique les modèles
+  d'énergie linéaires comme insuffisants, propose un terme quadratique équivalent
+  (θ1·n²in/nout) pour le prefill, validé à 1.79% MAPE sur GPU H100. Même diagnostic que le
+  nôtre, hardware différent (GPU datacenter vs CPU ARM edge) — les coefficients ne sont pas
+  comparables, seule la forme de la loi l'est.
+- **[18] *From Prompts to Power: Measuring the Energy Footprint of LLM Inference*, 2025** —
+  mesure 1 492 J à 57 000 tokens de prompt, cohérent avec une accélération à grande échelle,
+  bien que leur fit annoncé reste linéaire sur leur plage testée (probable effet de plage :
+  comme chez nous sous 1 000 tokens, le terme quadratique y est encore négligeable).
+
+### 5.2 n_ctx (contexte alloué) sans effet énergétique
+
+Notre campagne croisée longueur-de-prompt × n_ctx montre qu'un prompt de longueur fixe coûte
+la même énergie quel que soit n_ctx, même à 93% de remplissage du contexte alloué (écart < 1%,
+non significatif).
+
+- **[18] *From Prompts to Power*** — distingue explicitement capacité KV-cache **allouée** vs
+  longueur **réellement traitée** : la capacité allouée seule ne pilote pas l'énergie, sauf
+  quand le cache devient un vrai goulot mémoire (proche saturation totale). Confirme notre
+  constat sur un autre hardware (GPU datacenter).
+- **[2] LLMPi** — utilise des n_ctx de 4 096 et 8 192 sur Raspberry Pi 5 (même génération de
+  matériel que notre étude) mais n'étudie jamais l'effet de n_ctx lui-même sur l'énergie. Notre
+  campagne comble cet angle mort, sur le même hardware.
+
+### 5.3 n_threads : contribution non couverte par la littérature trouvée
+
+Notre campagne n_threads (1/2/4 cœurs) montre un optimum énergétique moyen à 2 threads, et un
+effet opposé selon la quantification (Q3 gagne jusqu'à -22% d'énergie à 4 threads, Q8 perd
+jusqu'à +44%).
+
+- **[19] *The Price of Prompting: Profiling Energy Use in Large Language Models Inference*,
+  2024** — méthodologie RAPL (Scaphandre) + nvidia-smi, **inapplicable sur ARM** (RAPL absent),
+  ce qui justifie a posteriori notre choix de mesure PMIC I²C onboard plutôt qu'un framework
+  logiciel standard.
+- Aucune des 6 sources consultées ([2], [ACM ToIoT], [16]–[19]) n'analyse l'effet du nombre de
+  threads CPU sur la consommation d'énergie en inférence LLM edge. **Le volet n_threads de
+  notre étude est donc une contribution originale**, pas une redite de résultats publiés.
+
+---
+
 ## Références
 
 - [2] Ardakani et al. *LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi*. CVPR 2025. https://arxiv.org/abs/2504.02118
@@ -119,4 +174,8 @@ avec granularité à l'échelle de la requête, sur 3 architectures × 3 niveaux
 - [12] SPIRALS. *PowerAPI*.
 - [13] Tung & Nguyen. *An Evaluation of LLMs Inference on Popular Single-board Computers*. 2025. https://arxiv.org/html/2511.07425v1
 - [15] Wang et al. *Model compression and efficient inference for LLMs: A survey*. CoRR 2024.
+- [16] Yuan et al. *Full Stack Optimization of Transformer Inference: a Survey*. 2023. https://arxiv.org/abs/2302.14017
+- [17] Cavagna & Proia. *SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference*. ACM/SPEC ICPE 2026. https://arxiv.org/abs/2602.05695
+- [18] *From Prompts to Power: Measuring the Energy Footprint of LLM Inference*. 2025. https://arxiv.org/abs/2511.05597
+- [19] *The Price of Prompting: Profiling Energy Use in Large Language Models Inference*. 2024. https://arxiv.org/abs/2407.16893
 - [ACM ToIoT] *Sustainable LLM Inference for Edge AI*. ACM ToIoT 2025. https://arxiv.org/abs/2504.03360
