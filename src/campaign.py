@@ -60,6 +60,11 @@ with open("prompts/prompts.json", encoding="utf-8") as f:
 # 2. Liste vide qui va recevoir TOUS les resultats (tous modeles confondus)
 resultats = []
 
+# Chemin fixe au demarrage (pas a la fin) : permet de sauvegarder au fur et a mesure,
+# meme si la campagne est interrompue avant la fin (crash, coupure, temps insuffisant).
+horodatage = datetime.now().strftime("%Y-%m-%d_%Hh%M")
+chemin = f"data/raw/resultats_{MACHINE}_{horodatage}.csv"
+
 # La prise se mesure au niveau du LOT (lente + compteur kWh a resolution grossiere) :
 # on enroule TOUTE la campagne dans UNE mesure, pas chaque requete (contrairement au PMIC).
 ctx_prise = MesurePrise(node_id=PRISE_NODE_ID, baseline_w=BASELINE_W) if MESURER_PRISE else contextlib.nullcontext()
@@ -134,9 +139,13 @@ with ctx_prise as prise:
                           f"{prompt[:30]}...  ->  {nb_tokens} tok, {duree:.2f} s, "
                           f"{joules:.1f} J (CodeCarbon) / {pmic.energie_joules:.1f} J (PMIC)")
 
-# 4. Ecrire TOUS les resultats par requete (methodes 1 et 2) dans un CSV horodate
-horodatage = datetime.now().strftime("%Y-%m-%d_%Hh%M")
-chemin = f"data/raw/resultats_{MACHINE}_{horodatage}.csv"
+        # 3d. CHECKPOINT : sauvegarde apres CHAQUE config terminee (pas d'attente fin de campagne).
+        # Si la campagne s'arrete/plante plus tard, tout ce qui est fait jusqu'ici est deja sur disque.
+        pd.DataFrame(resultats).to_csv(chemin, index=False)
+        print(f"[checkpoint] {len(resultats)} mesures sauvegardees "
+              f"({config['nom']} {config['quantification']} n_threads={config.get('n_threads', 4)} termine) -> {chemin}")
+
+# 4. Sauvegarde finale (redondante avec les checkpoints, mais confirme la fin propre)
 pd.DataFrame(resultats).to_csv(chemin, index=False)
 print(f"\n{len(resultats)} mesures enregistrees dans {chemin}")
 
