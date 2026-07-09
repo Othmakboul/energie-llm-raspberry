@@ -134,7 +134,7 @@ class MesurePrise:
     def _lire_kwh(self):
         """Lit le compteur kWh via une connexion COURTE et FRAICHE, dediee a cette lecture.
 
-        /!\ Ne PAS reutiliser self._ws ici : sur une connexion gardee ouverte tout le
+        ATTENTION : ne pas reutiliser self._ws ici : sur une connexion gardee ouverte tout le
         lot (campagne longue), interroger deux fois la meme connexion renvoie le MEME
         snapshot fige au moment de la connexion (kwh_debut == kwh_fin garanti, meme
         apres des heures) -> delta toujours 0. Une connexion neuve a chaque lecture
