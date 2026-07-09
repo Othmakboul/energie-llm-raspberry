@@ -136,9 +136,14 @@ class MesurePrise:
 
         ATTENTION : ne pas reutiliser self._ws ici : sur une connexion gardee ouverte tout le
         lot (campagne longue), interroger deux fois la meme connexion renvoie le MEME
-        snapshot fige au moment de la connexion (kwh_debut == kwh_fin garanti, meme
-        apres des heures) -> delta toujours 0. Une connexion neuve a chaque lecture
-        force le serveur a renvoyer l'etat CACHE ACTUEL (celui que l'UI affiche aussi).
+        snapshot fige au moment de la connexion -> delta toujours 0.
+
+        ATTENTION 2 : `node.get_value` seul lit le CACHE zwave-js, qui ne se met a jour
+        QUE si le device envoie un report de lui-meme (jamais observe ici - device ne
+        semble pas configure pour repporter spontanement malgre les parametres 101/111).
+        Le bouton "refresh" de l'UI, lui, force un VRAI poll radio -> on reproduit ca :
+        `node.poll_value` (force le device a repondre) PUIS `node.get_value` (relit le
+        cache, desormais a jour avec la reponse radio qu'on vient de forcer).
         """
         ws = websocket.create_connection(self.url, timeout=TIMEOUT_LECTURE)
         try:
@@ -146,6 +151,17 @@ class MesurePrise:
             schema = version.get("maxSchemaVersion", 0)
             ws.send(json.dumps({"messageId": "s", "command": "set_api_schema", "schemaVersion": schema}))
             ws.recv()
+
+            # 1. Force un vrai poll radio (equivalent bouton refresh de l'UI)
+            ws.send(json.dumps({
+                "messageId": "p",
+                "command": "node.poll_value",
+                "nodeId": self.node_id,
+                "valueId": _valueid(CLE_KWH),
+            }))
+            ws.recv()   # ack poll (on ignore le contenu, on relit le cache juste apres)
+
+            # 2. Relit le cache, maintenant a jour grace au poll qui vient de repondre
             ws.send(json.dumps({
                 "messageId": "g",
                 "command": "node.get_value",
