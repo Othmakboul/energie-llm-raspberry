@@ -132,19 +132,34 @@ class MesurePrise:
         return mid
 
     def _lire_kwh(self):
-        """Force une lecture FRAICHE du compteur kWh et la renvoie (float, kWh)."""
-        ev = threading.Event()
-        mid = self._envoyer({
-            "command": "node.poll_value",              # poll_value = lecture forcee (pas le cache)
-            "nodeId": self.node_id,
-            "valueId": _valueid(CLE_KWH),
-        })
-        self._events[mid] = ev
-        if ev.wait(TIMEOUT_LECTURE):
-            val = self._resultats.pop(mid, None)
+        """Lit le compteur kWh via une connexion COURTE et FRAICHE, dediee a cette lecture.
+
+        /!\ Ne PAS reutiliser self._ws ici : sur une connexion gardee ouverte tout le
+        lot (campagne longue), interroger deux fois la meme connexion renvoie le MEME
+        snapshot fige au moment de la connexion (kwh_debut == kwh_fin garanti, meme
+        apres des heures) -> delta toujours 0. Une connexion neuve a chaque lecture
+        force le serveur a renvoyer l'etat CACHE ACTUEL (celui que l'UI affiche aussi).
+        """
+        ws = websocket.create_connection(self.url, timeout=TIMEOUT_LECTURE)
+        try:
+            version = json.loads(ws.recv())
+            schema = version.get("maxSchemaVersion", 0)
+            ws.send(json.dumps({"messageId": "s", "command": "set_api_schema", "schemaVersion": schema}))
+            ws.recv()
+            ws.send(json.dumps({
+                "messageId": "g",
+                "command": "node.get_value",
+                "nodeId": self.node_id,
+                "valueId": _valueid(CLE_KWH),
+            }))
+            rep = json.loads(ws.recv())
+            res = rep.get("result") if isinstance(rep, dict) else None
+            val = res.get("value") if isinstance(res, dict) else res
             if val is not None:
                 return float(val)
-        # repli : derniere valeur kWh vue passer dans les events
+        finally:
+            ws.close()
+        # repli : derniere valeur kWh vue passer dans les events de la connexion longue
         return getattr(self, "_dernier_kwh", None)
 
     def _boucle_ws(self):
