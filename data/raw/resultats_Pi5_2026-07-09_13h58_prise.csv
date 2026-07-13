@@ -1,0 +1,4 @@
+machine,modele,nb_requetes,duree_lot_s,baseline_w,kwh_debut,kwh_fin,energie_mur_J,energie_mur_marginale_J,J_par_requete_mur,puissance_moyenne_mur_W,somme_J_pmic,somme_J_codecarbon,rendement_pmic_sur_mur_pct
+Pi5,Llama-3.2-1B,3645,53676.1,3.5,13.789,13.895,381600.0,193733.5,104.7,7.11,198316.6,344727.0,52.0
+Pi5,Gemma-3-1B,3645,46878.1,3.5,13.895,13.984,320400.0,156326.7,87.9,6.83,160241.3,295662.4,50.0
+Pi5,Qwen2.5-1.5B,3645,61794.4,3.5,13.984,14.11,453600.0,237319.6,124.4,7.34,242860.1,420312.6,53.5
