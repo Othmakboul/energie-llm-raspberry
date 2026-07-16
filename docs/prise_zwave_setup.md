@@ -49,9 +49,12 @@ Ouvrir `http://<ip-du-pi>:8091` → **Settings** :
 ## 4. Appairer la prise (inclusion)
 
 1. Brancher la ZW175 sur la prise murale qui **alimente l'alim USB-C du Pi** (c'est ça qu'on veut mesurer).
-2. Dans l'UI : **Control Panel → Actions → Inclusion** (ajouter un nœud), choisir l'inclusion **sécurisée (S2)** si proposé.
+2. Dans l'UI : **Control Panel → Actions → Inclusion** (ajouter un nœud), choisir l'inclusion **sécurisée (S2)**.
 3. Mettre la ZW175 en mode appairage : appuyer brièvement sur son **bouton** (voir notice ; en général 1 appui = action/inclusion).
-4. Le nœud apparaît dans la liste. **Noter son `node_id`** (ex. 2).
+4. L'inclusion S2 demande la **clé DSK de la prise** : scanner le **QR code imprimé sur la ZW175 elle-même**
+   (sur le boîtier, à côté du bouton) avec l'appareil photo du téléphone/PC, ou saisir le code manuellement
+   si l'UI le demande. Sans ce code, l'inclusion sécurisée échoue.
+5. Le nœud apparaît dans la liste. **Noter son `node_id`** (ex. 2).
 
 ## 5. Vérifier les valeurs (étape de validation indispensable)
 
