@@ -1,3 +1,11 @@
+"""
+Genere les figures de la campagne n_ctx (data/raw/nctx_*.csv) : energie,
+efficacite J/tok, debit, puissance, duree et heatmap, par modele x n_ctx.
+Ecrit les PNG dans figures/nctx/ et affiche un resume chiffre en console.
+
+A lancer : python src/analyse_nctx.py
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker

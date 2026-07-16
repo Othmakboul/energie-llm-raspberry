@@ -1,3 +1,11 @@
+"""
+Campagne dediee a l'effet de n_threads (nb de coeurs CPU) sur l'energie :
+memes modeles/quantifications que campaign.py, n_ctx fixe a 2048, n_threads
+varie (1 / 2 / 4). Ecrit une ligne par requete dans data/raw/nthreads_*.csv.
+
+A lancer : python src/campaign_nthreads.py
+"""
+
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 from pmic import MesurePMIC

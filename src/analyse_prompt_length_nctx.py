@@ -1,3 +1,13 @@
+"""
+Genere les figures de la campagne prompt_length x n_ctx
+(data/raw/prompt_length_nctx_*.csv) : comparaison energie a longueur de prompt
+egale selon n_ctx (isole l'effet du contexte alloue), et ajustement quadratique
+energie vs longueur reelle du prompt. Ecrit les PNG dans
+figures/prompt_length_nctx/ et le detail du fit en console.
+
+A lancer : python src/analyse_prompt_length_nctx.py
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

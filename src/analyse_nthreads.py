@@ -1,3 +1,12 @@
+"""
+Genere les figures de la campagne n_threads (data/raw/nthreads_*.csv) : energie,
+efficacite J/tok, debit, puissance et heatmap, par modele x n_threads.
+Version initiale de cette campagne — voir analyse_nthreads_v2.py pour la
+version avec les donnees corrigees (prise Z-Wave) et l'analyse de variabilite.
+
+A lancer : python src/analyse_nthreads.py
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker

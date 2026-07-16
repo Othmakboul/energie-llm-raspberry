@@ -1,8 +1,16 @@
+"""
+Brique d'apprentissage : une seule requete sur le modele, mesuree.
+Script autonome (pas de fonction/CLI) : sert a verifier que le modele charge
+et repond, et a voir une premiere mesure d'energie/duree/tokens.
+
+A lancer : python src/inference.py
+"""
+
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 import time
 
-# 1. Charger le modele 
+# 1. Charger le modele
 mon_modele = Llama(model_path="models/Llama-3.2-1B-Instruct-Q4_K_M.gguf", verbose=False)
 
 # 2. Demarrer le compteur d'energie + le chrono

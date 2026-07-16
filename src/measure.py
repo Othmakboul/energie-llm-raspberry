@@ -1,3 +1,11 @@
+"""
+Brique d'apprentissage : CodeCarbon + psutil sur un calcul factice (pas de LLM).
+Sert de premier test de la chaine de mesure logicielle avant de mesurer une
+vraie inference (voir inference.py, puis campaign.py pour la version complete).
+
+A lancer : python src/measure.py
+"""
+
 import psutil
 from codecarbon import EmissionsTracker
 

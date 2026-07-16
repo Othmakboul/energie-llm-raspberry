@@ -1,3 +1,14 @@
+"""
+Genere les figures de la campagne n_threads sur les donnees corrigees du 09/07
+(data/raw/resultats_Pi5_2026-07-09_13h58.csv) : energie, efficacite J/tok,
+debit, puissance, heatmap, variabilite (coefficient de variation) et
+comparaison PMIC vs prise connectee (rendement). Ecrit les PNG dans
+figures/nthreads_v2/ et un resume CSV, plus les meilleurs n_threads par modele
+en console.
+
+A lancer : python src/analyse_nthreads_v2.py
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker

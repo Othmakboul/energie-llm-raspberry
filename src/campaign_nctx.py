@@ -1,3 +1,11 @@
+"""
+Campagne dediee a l'effet de n_ctx (taille de contexte allouee) sur l'energie :
+memes modeles/quantifications que campaign.py, n_threads fixe a 4, n_ctx varie
+(512 / 2048 / 8192). Ecrit une ligne par requete dans data/raw/nctx_*.csv.
+
+A lancer : python src/campaign_nctx.py
+"""
+
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 from pmic import MesurePMIC

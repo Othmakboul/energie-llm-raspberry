@@ -1,3 +1,12 @@
+"""
+Campagne de mesure principale : modele x quantification x n_threads x max_tokens,
+sur l'echantillon de prompts fige (prompts/prompts.json). Mesure les 3 methodes
+en parallele (CodeCarbon, PMIC, prise connectee) et ecrit une ligne par requete
+dans data/raw/, plus un resume par modele pour la prise.
+
+A lancer : python src/campaign.py (regler les constantes ci-dessous avant).
+"""
+
 from llama_cpp import Llama
 from codecarbon import EmissionsTracker
 from pmic import MesurePMIC      # methode 2 : mesure onboard REELLE du Pi 5 (mock hors Pi) [Amine]
