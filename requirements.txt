@@ -11,3 +11,4 @@ matplotlib
 
 # Interface de visualisation
 streamlit
+plotly
