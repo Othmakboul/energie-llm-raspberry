@@ -15,6 +15,10 @@ models/*
 data/*
 !data/.gitkeep
 
+# Figures générées (régénérables via src/analyse_*.py)
+figures/*
+!figures/.gitkeep
+
 # Outils / logs
 *.log
 .DS_Store
