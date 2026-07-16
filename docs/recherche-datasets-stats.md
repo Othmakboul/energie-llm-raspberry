@@ -3,7 +3,7 @@
 > Réponse aux deux demandes des tuteurs (11/06/2026) :
 > (a) quel dataset de prompts utiliser ; (b) moyenne ou médiane, combien de répétitions.
 > Sources : 6 articles arXiv (sources primaires) lus par recherche automatisée.
-> ⚠️ Infos extraites des articles mais à RE-VÉRIFIER lors de notre lecture
+> Attention : infos extraites des articles mais à RE-VÉRIFIER lors de notre lecture
 > (la passe de vérification croisée a été interrompue par une limite de session).
 
 ---
@@ -94,4 +94,4 @@
 5. arXiv **2512.03024** — TokenPowerBench : benchmark puissance/énergie, Alpaca + LongBench, stratification par longueur. https://arxiv.org/html/2512.03024v1
 6. arXiv **2511.05597** — 32 500+ mesures par prompt sur GPU datacenter (pas edge) ; sortie 100→900 tokens = ×11. https://arxiv.org/abs/2511.05597
 
-> ⚠️ Rappel : vérifier titres/auteurs exacts sur les pages arXiv au moment de citer.
+> Rappel : vérifier titres/auteurs exacts sur les pages arXiv au moment de citer.

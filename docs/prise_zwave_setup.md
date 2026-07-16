@@ -59,7 +59,7 @@ Dans **Control Panel**, sélectionner le nœud de la prise, onglet **Values** :
 - repérer la valeur **`Electric_kWh_Consumed`** (énergie cumulée, kWh) et **`Electric_W_Consumed`** (puissance, W) ;
 - vérifier leur **`propertyKey`** (attendus : kWh = `65537`, W = `66049`) et l'**endpoint** (attendu : `0`).
 
-⚠️ **Si les `propertyKey` / endpoint diffèrent sur ton firmware**, les reporter dans `src/prise.py`
+**Attention : si les `propertyKey` / endpoint diffèrent sur ton firmware**, les reporter dans `src/prise.py`
 (constantes `CLE_KWH`, `CLE_W`, `ENDPOINT`, `NODE_ID`).
 
 Onglet **Configuration** : vérifier la résolution du compteur kWh (pas de 0,01 vs 0,001 kWh) —

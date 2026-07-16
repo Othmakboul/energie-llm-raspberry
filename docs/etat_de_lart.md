@@ -37,12 +37,12 @@ soulève deux verrous : (1) la mémoire limitée impose des modèles ≤ 2B para
 
 | Outil | Type | Disponible Pi | Note |
 |-------|------|---------------|------|
-| CodeCarbon [11] | Estimation logicielle | ✓ | Surestime +12 à +35% sur ARM (RAPL absent) |
-| PMIC I²C Pi5 | Mesure hardware onboard | ✓ | Notre méthode principale — rail VDD_CORE isolé |
-| Scaphandre [8] | Monitoring RAPL | ✗ | RAPL absent ARM → inutilisable Pi |
-| PowerAPI [12] | Framework RAPL | ✗ | Même limitation |
+| CodeCarbon [11] | Estimation logicielle | Oui | Surestime +12 à +35% sur ARM (RAPL absent) |
+| PMIC I²C Pi5 | Mesure hardware onboard | Oui | Notre méthode principale — rail VDD_CORE isolé |
+| Scaphandre [8] | Monitoring RAPL | Non | RAPL absent ARM → inutilisable Pi |
+| PowerAPI [12] | Framework RAPL | Non | Même limitation |
 | Alumet [9] | Framework modulaire | Partiel | Pas testé Pi5 |
-| Joulescope JS110 | Hardware externe | ✓ (coûteux) | Utilisé dans [ACM ToIoT] — alternative à prise Z-Wave |
+| Joulescope JS110 | Hardware externe | Oui (coûteux) | Utilisé dans [ACM ToIoT] — alternative à prise Z-Wave |
 
 ---
 
