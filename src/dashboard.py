@@ -124,7 +124,14 @@ def load_nthreads():
 
 @st.cache_data
 def load_prise_nthreads():
-    return load_csv(f"{DATA}/resultats_Pi5_2026-07-09_13h58_prise.csv")
+    df = load_csv(f"{DATA}/resultats_Pi5_2026-07-09_13h58_prise.csv")
+    return df.rename(columns={
+        "energie_mur_J": "energie_prise_J",
+        "energie_mur_marginale_J": "energie_prise_marginale_J",
+        "J_par_requete_mur": "J_par_requete_prise",
+        "puissance_moyenne_mur_W": "puissance_moyenne_prise_W",
+        "rendement_pmic_sur_mur_pct": "rendement_pmic_sur_prise_pct",
+    })
 
 
 @st.cache_data
@@ -462,7 +469,7 @@ def mode_vue_globale():
 
 
 # ============================================================
-#  MODE 5 : COMPARAISON 3 METHODES (CodeCarbon / PMIC / Mur)
+#  MODE 5 : COMPARAISON 3 METHODES (CodeCarbon / PMIC / Prise)
 # ============================================================
 
 def mode_comparaison_methodes():
@@ -473,10 +480,10 @@ def mode_comparaison_methodes():
     df = load_nthreads()
     prise = load_prise_nthreads()
 
-    # Repartition proportionnelle : mur_estime par requete = poids PMIC x total mur marginal du modele
-    df = df.merge(prise[["modele", "energie_mur_marginale_J"]], on="modele", how="left")
+    # Repartition proportionnelle : prise_estimee par requete = poids PMIC x total prise marginal du modele
+    df = df.merge(prise[["modele", "energie_prise_marginale_J"]], on="modele", how="left")
     somme_pmic_modele = df.groupby("modele")["joules_pmic"].transform("sum")
-    df["mur_estime_J"] = df["joules_pmic"] / somme_pmic_modele * df["energie_mur_marginale_J"]
+    df["prise_estimee_J"] = df["joules_pmic"] / somme_pmic_modele * df["energie_prise_marginale_J"]
 
     sidebar_section("Modele & quantification")
     modeles = st.sidebar.pills("Modele(s)", sorted(df["modele"].unique()),
@@ -498,52 +505,52 @@ def mode_comparaison_methodes():
         st.info("Vue agregee : 3 vraies mesures independantes, une par modele sur toute la campagne "
                 "(ne varie pas avec les filtres n_threads/quantification ci-dessus).")
         p = prise[prise["modele"].isin(modeles)]
-        items = [(row["modele"], fmt(row["rendement_pmic_sur_mur_pct"], 1, " %"),
-                  f"PMIC {row['somme_J_pmic']:.0f} J / mur {row['energie_mur_marginale_J']:.0f} J")
+        items = [(row["modele"], fmt(row["rendement_pmic_sur_prise_pct"], 1, " %"),
+                  f"PMIC {row['somme_J_pmic']:.0f} J / prise {row['energie_prise_marginale_J']:.0f} J")
                  for _, row in p.iterrows()]
         if items:
             kpi_row(items)
         return
 
     kpi_row([
-        ("Rendement PMIC/mur", fmt(prise[prise["modele"].isin(modeles)]["rendement_pmic_sur_mur_pct"].mean(),
-                                    1, " %"), "moyenne modeles selectionnes"),
+        ("Rendement PMIC/prise", fmt(prise[prise["modele"].isin(modeles)]["rendement_pmic_sur_prise_pct"].mean(),
+                                      1, " %"), "moyenne modeles selectionnes"),
         ("CodeCarbon vs PMIC", fmt((sub["joules"].mean() / sub["joules_pmic"].mean() - 1) * 100, 1, " %"),
          "surestimation logicielle"),
-        ("Ratio mur/PMIC", "~0.976", "stable sur les 3 modeles"),
+        ("Ratio prise/PMIC", "~0.976", "stable sur les 3 modeles"),
         ("Mesures", str(len(sub)), ""),
     ])
     st.divider()
 
-    st.warning("Valeurs **mur estimees** par repartition proportionnelle du total mesure par modele "
-               "(hypothese : rendement PMIC/mur constant a travers n_threads et quantification -- "
-               "non verifie independamment, car la mesure au mur n'existe qu'agregee par modele).")
+    st.warning("Valeurs **prise estimees** par repartition proportionnelle du total mesure par modele "
+               "(hypothese : rendement PMIC/prise constant a travers n_threads et quantification -- "
+               "non verifie independamment, car la mesure a la prise n'existe qu'agregee par modele).")
 
     agg = (sub.groupby(["label", "n_threads"])
            .agg(codecarbon_J=("joules", "mean"), pmic_J=("joules_pmic", "mean"),
-                mur_estime_J=("mur_estime_J", "mean"))
+                prise_estimee_J=("prise_estimee_J", "mean"))
            .reset_index())
     agg["n_threads"] = agg["n_threads"].astype(str)
     agg_melt = agg.melt(id_vars=["label", "n_threads"],
-                         value_vars=["codecarbon_J", "pmic_J", "mur_estime_J"],
+                         value_vars=["codecarbon_J", "pmic_J", "prise_estimee_J"],
                          var_name="methode", value_name="joules")
     agg_melt["methode"] = agg_melt["methode"].replace({
         "codecarbon_J": "CodeCarbon (estime logiciel)",
         "pmic_J": "PMIC (mesure reelle)",
-        "mur_estime_J": "Mur -- estime (derive)",
+        "prise_estimee_J": "Prise -- estime (derive)",
     })
 
     fig = px.bar(agg_melt, x="label", y="joules", color="methode", facet_col="n_threads",
                  barmode="group", pattern_shape="methode",
-                 pattern_shape_map={"Mur -- estime (derive)": "/", "PMIC (mesure reelle)": "",
+                 pattern_shape_map={"Prise -- estime (derive)": "/", "PMIC (mesure reelle)": "",
                                      "CodeCarbon (estime logiciel)": ""},
                  color_discrete_map={
                      "CodeCarbon (estime logiciel)": "#94A3B8",
                      "PMIC (mesure reelle)": "#0EA5E9",
-                     "Mur -- estime (derive)": "#F59E0B",
+                     "Prise -- estime (derive)": "#F59E0B",
                  },
                  labels={"joules": "Energie moyenne par requete (J)", "label": ""},
-                 title="CodeCarbon vs PMIC vs Mur (estime) par n_threads")
+                 title="CodeCarbon vs PMIC vs Prise (estime) par n_threads")
     fig.update_traces(hovertemplate="%{x}<br>%{y:.1f} J<extra></extra>")
     st.plotly_chart(style_fig(fig, height=460, rounded_bars=True), width="stretch")
 
@@ -620,12 +627,30 @@ st.markdown('<div class="hero-title">Energie LLM sur Raspberry Pi 5</div>', unsa
 st.markdown('<div class="hero-sub">Stage LISTIC -- mesures energetiques d\'inference LLM quantifies</div>',
             unsafe_allow_html=True)
 
+with st.expander(":material/info: Contexte -- a lire avant les graphes", expanded=False):
+    st.markdown("""
+**Ce qui est mesure.** Des LLM legers quantifies (Llama-3.2-1B, Qwen2.5-1.5B, Gemma-3-1B)
+tournent en inference sur un Raspberry Pi 5 (16 Go). A chaque requete, l'energie consommee
+est mesuree/estimee par **3 methodes en parallele** :
+- **CodeCarbon** -- estimation logicielle par TDP (pas de compteur materiel sur ARM, donc peu fiable seule).
+- **PMIC** -- mesure reelle onboard (`vcgencmd pmic_read_adc`), par composant (CPU, RAM...), ne voit pas le rail d'entree.
+- **Prise connectee** -- mesure reelle au mur (Aeotec Z-Wave), inclut les pertes de l'alimentation, seule mesure du systeme total.
+
+**Ce qui varie entre les modes ci-dessous** : n_threads, n_ctx, taille du prompt, modele/quantification --
+chaque mode isole un seul parametre pour rester lisible (pas de croisement de filtres qui melangerait
+des combinaisons jamais mesurees ensemble).
+
+**Comment lire les graphes** : l'unite de reference est le **J/tok** (Joules par token genere) --
+plus bas = plus efficace. Le detail methodologique complet est dans `docs/architecture_mesure.md`
+et `docs/etat_de_lart.md`.
+    """)
+
 MODES = {
     "Impact n_threads": mode_nthreads,
     "Impact n_ctx": mode_nctx,
     "Impact taille prompt": mode_taille_prompt,
     "Vue globale modele/quantification": mode_vue_globale,
-    "Comparaison 3 methodes (CodeCarbon/PMIC/Mur)": mode_comparaison_methodes,
+    "Comparaison 3 methodes (CodeCarbon/PMIC/Prise)": mode_comparaison_methodes,
     "Sensibilisation -- combien coute ta question ?": mode_sensibilisation,
 }
 
